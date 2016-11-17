@@ -10,12 +10,16 @@
 </h:head>
 
 <h:body>
-   <b:container>
-      <b:row>
-         <b:column>
-            <h1>HELLO</h1>
-         </b:column>
-      </b:row>
-   </b:container>
+   <ui:composition template="template/main.xhtml">
+      <ui:define name="header">
+         <h2>HEADER</h2>
+      </ui:define>
+      <ui:define name="content">
+         <h2>CONTENT</h2>
+      </ui:define>
+      <ui:define name="footer">
+         <h2>FOOTER</h2>
+      </ui:define>
+   </ui:composition>
 </h:body>
 </html>

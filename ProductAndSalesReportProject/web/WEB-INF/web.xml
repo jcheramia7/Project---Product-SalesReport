@@ -17,8 +17,8 @@
         <param-value>Development</param-value>
     </context-param>
     <welcome-file-list>
-        <welcome-file>index.jsf</welcome-file>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsf</welcome-file>
+        <welcome-file>login.html</welcome-file>
     </welcome-file-list>
     <security-constraint>
         <display-name>Restrict direct access to XHTML files</display-name>
