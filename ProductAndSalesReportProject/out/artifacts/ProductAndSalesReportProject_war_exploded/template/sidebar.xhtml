@@ -9,6 +9,7 @@
 <ui:composition>
 
 <h:head>
+
     <title>Sidebar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -19,11 +20,11 @@
     <h:outputStylesheet name="bootstrap.css" library="css"/>
     <h:outputStylesheet name="main-style.css" library="css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
 
 </h:head>
 
 <h:body>
-
         <!-- navbar side -->
         <nav class="navbar-default navbar-static-side" role="navigation">
             <!-- sidebar-collapse -->
@@ -37,7 +38,7 @@
                                 <h:graphicImage library="img" name="user.jpg"/>
                             </div>
                             <div class="user-info">
-                                <div>Jonny <strong>Deen</strong></div>
+                                <div>EntJey <strong>For</strong></div>
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>Online
                                 </div>
@@ -83,13 +84,7 @@
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>UI Elements<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="panels-wells.html">Panels and Wells</a>
-                            </li>
 
-
-                        </ul>
                         <!-- second-level-items -->
                     </li>
 
@@ -105,6 +100,8 @@
         </div>
 
         <!-- JS -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootsrtap.min.js"/>
         <h:outputScript name="bootstrap.min.js" library="js"/>
         <h:outputScript name="dashboard-demo.js" library="js"/>
         <h:outputScript name="jquery.metisMenu.js" library="js"/>
