@@ -22,21 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="167">
+              <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+            <state relative-caret-position="167">
+              <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -84,8 +84,8 @@
         <option value="$PROJECT_DIR$/web/resources/css/style.css" />
         <option value="$PROJECT_DIR$/web/resources/css/morris-0.4.3.min.css" />
         <option value="$PROJECT_DIR$/web/resources/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/web/template/header.xhtml" />
         <option value="$PROJECT_DIR$/web/template/sidebar.xhtml" />
+        <option value="$PROJECT_DIR$/web/template/header.xhtml" />
       </list>
     </option>
   </component>
@@ -1002,12 +1002,12 @@
       <workItem from="1479886817754" duration="35000" />
       <workItem from="1479886869389" duration="1219000" />
       <workItem from="1479890793557" duration="21000" />
-      <workItem from="1479890829729" duration="259000" />
+      <workItem from="1479890829729" duration="508000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30816000" />
+    <option name="totallyTimeSpent" value="31065000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1342,18 +1342,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="167">
+          <caret line="123" column="14" selection-start-line="123" selection-start-column="14" selection-end-line="123" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="107" column="33" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+        <state relative-caret-position="167">
+          <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
           <folding />
         </state>
       </provider>
