@@ -3,7 +3,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<ui:composition>
 
 <h:head>
     <title>Sidebar</title>
@@ -17,20 +20,10 @@
     <h:outputStylesheet name="main-style.css" library="css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
-    <!-- JS -->
-    <h:outputScript name="bootstrap.min.js" library="js"/>
-    <h:outputScript name="dashboard-demo.js" library="js"/>
-    <h:outputScript name="jquery.metisMenu.js" library="js"/>
-    <h:outputScript name="jquery-1.10.2.js" library="js"/>
-    <h:outputScript name="morris.js" library="js"/>
-    <h:outputScript name="pace.js" library="js"/>
-    <h:outputScript name="raphael-2.1.0.min.js" library="js"/>
-    <h:outputScript name="siminta.js" library="js"/>
-
 </h:head>
 
 <h:body>
-    <ui:composition>
+
         <!-- navbar side -->
         <nav class="navbar-default navbar-static-side" role="navigation">
             <!-- sidebar-collapse -->
@@ -111,7 +104,17 @@
 
         </div>
 
-    </ui:composition>
+        <!-- JS -->
+        <h:outputScript name="bootstrap.min.js" library="js"/>
+        <h:outputScript name="dashboard-demo.js" library="js"/>
+        <h:outputScript name="jquery.metisMenu.js" library="js"/>
+        <h:outputScript name="jquery-1.10.2.js" library="js"/>
+        <h:outputScript name="morris.js" library="js"/>
+        <h:outputScript name="pace.js" library="js"/>
+        <h:outputScript name="raphael-2.1.0.min.js" library="js"/>
+        <h:outputScript name="siminta.js" library="js"/>
+
 </h:body>
+</ui:composition>
 
 </html>
