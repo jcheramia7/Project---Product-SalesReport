@@ -22,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/template/main.xhtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -42,10 +42,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="sidebar.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="header.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
+            <state relative-caret-position="761">
               <caret line="55" column="95" selection-start-line="55" selection-start-column="95" selection-end-line="55" selection-end-column="95" />
               <folding />
             </state>
@@ -67,16 +77,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
               <caret line="11" column="50" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph.xhtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/graph.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -160,7 +160,6 @@
         <option value="$PROJECT_DIR$/web/resources/css/font-awesome.css" />
         <option value="$PROJECT_DIR$/web/resources/css/main-style.css" />
         <option value="$PROJECT_DIR$/web/resources/css/morris-0.4.3.min.css" />
-        <option value="$PROJECT_DIR$/web/template/sidebar.xhtml" />
         <option value="$PROJECT_DIR$/web/login.xhtml" />
         <option value="$PROJECT_DIR$/web/resources/css/style.css" />
         <option value="$PROJECT_DIR$/web/resources/css/bootstrap.css" />
@@ -178,6 +177,7 @@
         <option value="$PROJECT_DIR$/web/setting.xhtml" />
         <option value="$PROJECT_DIR$/web/template/header.xhtml" />
         <option value="$PROJECT_DIR$/web/template/main.xhtml" />
+        <option value="$PROJECT_DIR$/web/template/sidebar.xhtml" />
       </list>
     </option>
   </component>
@@ -1096,15 +1096,15 @@
       <workItem from="1479886869389" duration="1219000" />
       <workItem from="1479890793557" duration="21000" />
       <workItem from="1479890829729" duration="7117000" />
-      <workItem from="1479959080840" duration="2721000" />
+      <workItem from="1479959080840" duration="2852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40395000" />
+    <option name="totallyTimeSpent" value="40526000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1306,14 +1306,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="102" selection-start-line="81" selection-start-column="102" selection-end-line="81" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -1466,18 +1458,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/main.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
+        <state relative-caret-position="761">
           <caret line="55" column="95" selection-start-line="55" selection-start-column="95" selection-end-line="55" selection-end-column="95" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/main.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        <state relative-caret-position="81">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
           <folding />
         </state>
       </provider>
