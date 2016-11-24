@@ -52,9 +52,11 @@
                     </a>
                     <!-- dropdown user-->
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                        <li>
+                            <h:link outcome="profile" value="User Profile"><i class="fa fa-user fa-fw"></i></h:link>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                        <li>
+                            <h:link outcome="setting" value="Setting"><i class="fa fa-gear fa-fw"></i></h:link>
                         </li>
                         <li class="divider"></li>
                         <li><h:link outcome="login"><i class="fa fa-sign-out fa-fw"/>Logout</h:link>
