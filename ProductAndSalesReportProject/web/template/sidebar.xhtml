@@ -60,20 +60,24 @@
                     </li>
                     <li class="selected">
                         <h:link outcome="viewSale">
-                            <i class="fa fa-dashboard fa-fw"></i>Sales
+                            <i class="fa fa-dashboard fa-fw"/>Sales
                         </h:link>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <h:link value="Flot Charts" outcome="index"/>
-                            </li>
-                            <li>
-                                <h:link value="Morris Charts" outcome="index"/>
-                            </li>
-                        </ul>
-                        <!-- second-level-items -->
+                        <h:link outcome="viewExpense">
+                            <i class="fa fa-flask fa-fw"/>Expenses
+                        </h:link>
+                    </li>
+                    <li>
+                        <h:link outcome="graph">
+                            <i class="fa fa-flask fa-fw"/>Graph
+                        </h:link>
+                    </li>
+
+                    <li>
+                        <h:link outcome="viewProduct">
+                            <i class="fa fa-flask fa-fw"/>Product
+                        </h:link>
                     </li>
                     <li>
                         <h:link value="Timeline" outcome="index"><i class="fa fa-flask fa-fw"/></h:link>
