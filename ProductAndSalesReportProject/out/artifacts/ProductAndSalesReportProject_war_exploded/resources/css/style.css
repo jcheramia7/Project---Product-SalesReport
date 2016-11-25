@@ -31,17 +31,17 @@ body {
 
 #wrapper {
     width: 100%;
-    margin-top: 55px!important;
+    height: 100%;
+    margin-top: 55px;
     background-color:#04B173;
 }
 
 #page-wrapper {
+    height:100%;
     padding: 0 15px;
     min-height: 568px;
     background-color:rgb(209, 212, 216);
 }
-
-
 
 
 
