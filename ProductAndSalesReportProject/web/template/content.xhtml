@@ -6,9 +6,11 @@
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
+
+
 <h:head>
 
-    <title>Main layout</title>
+    <title>Sidebar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <h:outputStylesheet name="style.css" library="css"/>
@@ -23,30 +25,8 @@
 </h:head>
 
 <h:body>
-    <div class="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-            <ui:insert name="header">
-                <ui:include src="header.xhtml"/>
-            </ui:insert>
-        </nav>
-        <br/><br/><br/>
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu">
-                    <ui:insert name="sidebar">
-                        <ui:include src="sidebar.xhtml"/>
-                    </ui:insert>
-                </ul>
-            </div>
-        </nav>
-        <!--  page-wrapper -->
-        <div id="page-wrapper">
-                <ui:insert name="content">
-                    <ui:include src="content.xhtml"/>
-                </ui:insert>
-        </div>
-        <!-- end page-wrapper -->
-    </div>
+    <ui:composition>
+
 
     <!-- JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
@@ -59,6 +39,8 @@
     <h:outputScript name="pace.js" library="js"/>
     <h:outputScript name="raphael-2.1.0.min.js" library="js"/>
     <h:outputScript name="siminta.js" library="js"/>
+
+    </ui:composition>
 </h:body>
 
 </html>

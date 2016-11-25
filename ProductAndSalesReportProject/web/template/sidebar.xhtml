@@ -6,7 +6,7 @@
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://java.sun.com/jsf/facelets">
 
-<ui:composition>
+
 
 <h:head>
 
@@ -25,12 +25,7 @@
 </h:head>
 
 <h:body>
-        <!-- navbar side -->
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <!-- sidebar-collapse -->
-            <div class="sidebar-collapse">
-                <!-- side-menu -->
-                <ul class="nav" id="side-menu">
+    <ui:composition>
                     <li>
                         <!-- user image section-->
                         <div class="user-section">
@@ -93,17 +88,6 @@
                         <!-- second-level-items -->
                     </li>
 
-                </ul>
-                <!-- end side-menu -->
-            </div>
-            <!-- end sidebar-collapse -->
-        </nav>
-        <!-- end navbar side -->
-
-        <div class="page-wrapper">
-
-        </div>
-
         <!-- JS -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootsrtap.min.js"/>
@@ -116,7 +100,8 @@
         <h:outputScript name="raphael-2.1.0.min.js" library="js"/>
         <h:outputScript name="siminta.js" library="js"/>
 
+
+    </ui:composition>
 </h:body>
-</ui:composition>
 
 </html>

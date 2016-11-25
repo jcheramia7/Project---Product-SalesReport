@@ -10,6 +10,7 @@
 
     <title>Main layout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <h:outputStylesheet name="style.css" library="css"/>
     <h:outputStylesheet name="pace-theme-big-counter.css" library="css"/>
     <h:outputStylesheet name="morris-0.4.3.min.css" library="css"/>
@@ -23,13 +24,28 @@
 
 <h:body>
     <div class="wrapper">
-    <ui:insert name="header">
-        <ui:include src="header.xhtml"/>
-    </ui:insert>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+            <ui:insert name="header">
+                <ui:include src="header.xhtml"/>
+            </ui:insert>
+        </nav>
         <br/><br/><br/>
-    <ui:insert name="sidebar">
-        <ui:include src="sidebar.xhtml"/>
-    </ui:insert>
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="side-menu">
+                    <ui:insert name="sidebar">
+                        <ui:include src="sidebar.xhtml"/>
+                    </ui:insert>
+                </ul>
+            </div>
+        </nav>
+        <!--  page-wrapper -->
+        <div id="page-wrapper">
+                <ui:insert name="content">
+                    <ui:include src="content.xhtml"/>
+                </ui:insert>
+        </div>
+        <!-- end page-wrapper -->
     </div>
 
     <!-- JS -->
