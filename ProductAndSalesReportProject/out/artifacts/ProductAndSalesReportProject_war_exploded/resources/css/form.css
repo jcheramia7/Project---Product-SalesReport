@@ -29,9 +29,9 @@ form h1 {
 
 form {
     border-radius: 5px;
-    max-width:850px;
+    max-width:950px;
     width:100%;
-    margin: 5% auto;
+    margin: 1% 10%;
     background-color: transparent;
     overflow: hidden;
 
