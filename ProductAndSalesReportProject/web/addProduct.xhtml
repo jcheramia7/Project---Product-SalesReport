@@ -29,10 +29,6 @@
 
             <!-- Main Content -->
             <h:form>
-                <!-- Form Header -->
-                <h1>Please fill up fields to add product</h1>
-                <!-- End Form Header -->
-
                 <!-- Form -->
                 <div class="contentform">
                     <!-- Left Column Form -->
@@ -42,19 +38,16 @@
                             <input type="text" name="name" id="name" data-rule="required"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Category</p>
                             <input type="text" name="category" id="category"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Quantity</p>
                             <input type="number" name="quantity" id="quantity"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Weight</p>
                             <input type="number" name="weight" id="weight"/>
@@ -62,7 +55,6 @@
                         </div>
                     </div>
                     <!-- End Left Column Form -->
-
                     <!-- Right Column Form -->
                     <div class="rightcontact">
                         <div class="form-group">
@@ -70,19 +62,16 @@
                             <input type="number" name="cost" id="cost"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Price per item</p>
                             <input type="number" name="price" id="price"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Expiration Date</p>
                             <input type="date" name="expiredate" id="expiredate" data-rule="required"/>
                             <div class="validation"></div>
                         </div>
-
                         <div class="form-group">
                             <p>Alert me when quantity is below</p>
                             <input type="number" name="alertqty" id="alertqty"/>
@@ -94,13 +83,11 @@
                 <!-- End Form -->
             </h:form>
             <!-- End Content Form -->
-
             <!-- Button -->
             <div class="button">
                 <button type="submit" class="bouton-add">Add Product</button>
             </div>
             <!-- End Button -->
-
         </ui:define>
     </ui:composition>
 </h:body>
