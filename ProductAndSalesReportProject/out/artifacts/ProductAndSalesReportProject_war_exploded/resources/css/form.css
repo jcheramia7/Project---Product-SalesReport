@@ -79,6 +79,12 @@ textarea {
     padding: 0px 15px;
 }
 
+.searchbox {
+	float: right;
+	margin: 0px;
+	
+}
+
 .form-group {
     overflow: hidden;
     clear: both;
@@ -89,7 +95,7 @@ textarea {
     float: left;
     border-radius: 5px 0px 0px 5px;
     background:#eeeeee;
-    height:42px;
+    height:40px;
     position: relative;
     text-align: center;
     line-height:40px;
@@ -100,7 +106,7 @@ i {
 }
 
 .contentform {
-    padding: 40px 30px;
+    padding: 20px 30px;
 
 }
 
@@ -136,6 +142,13 @@ i {
     float:right;
     box-sizing: border-box;
     padding: 0px 0px 0px 15px;
+    margin-bottom: 40px;
+}
+.contact {
+    width:850px;
+    float:right;
+    box-sizing: border-box;
+    padding: 0px 200px 0px 200px;
     margin-bottom: 40px;
 }
 

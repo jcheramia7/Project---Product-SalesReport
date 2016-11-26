@@ -79,6 +79,12 @@ textarea {
     padding: 0px 15px;
 }
 
+.searchbox {
+	float: right;
+	margin: 0px;
+	
+}
+
 .form-group {
     overflow: hidden;
     clear: both;
@@ -100,7 +106,7 @@ i {
 }
 
 .contentform {
-    padding: 40px 30px;
+    padding: 20px 30px;
 
 }
 
