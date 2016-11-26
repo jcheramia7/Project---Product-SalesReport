@@ -35,8 +35,18 @@
       <file leaf-file-name="viewExpense.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/viewExpense.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="339">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -45,18 +55,18 @@
       <file leaf-file-name="addExpense.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/addExpense.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="493">
               <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
+      <file leaf-file-name="sidebar.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+            <state relative-caret-position="242">
+              <caret line="41" column="30" selection-start-line="34" selection-start-column="24" selection-end-line="41" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -72,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/login.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="34" column="25" selection-start-line="33" selection-start-column="15" selection-end-line="34" selection-end-column="25" />
+            <state relative-caret-position="1043">
+              <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -168,10 +178,10 @@
         <option value="$PROJECT_DIR$/web/template/sidebar.xhtml" />
         <option value="$PROJECT_DIR$/web/template/header.xhtml" />
         <option value="$PROJECT_DIR$/web/addProduct.xhtml" />
-        <option value="$PROJECT_DIR$/web/viewExpense.xhtml" />
-        <option value="$PROJECT_DIR$/web/login.xhtml" />
         <option value="$PROJECT_DIR$/web/signup.xhtml" />
         <option value="$PROJECT_DIR$/web/addExpense.xhtml" />
+        <option value="$PROJECT_DIR$/web/viewExpense.xhtml" />
+        <option value="$PROJECT_DIR$/web/login.xhtml" />
       </list>
     </option>
   </component>
@@ -1122,15 +1132,15 @@
       <workItem from="1480170816915" duration="569000" />
       <workItem from="1480179667311" duration="49000" />
       <workItem from="1480186075308" duration="3023000" />
-      <workItem from="1480194827911" duration="2847000" />
+      <workItem from="1480194827911" duration="6284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63030000" />
+    <option name="totallyTimeSpent" value="66467000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1426,13 +1436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/addSale.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
@@ -1457,22 +1460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/viewExpense.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="34" column="25" selection-start-line="33" selection-start-column="15" selection-end-line="34" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/signup.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1481,18 +1468,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/addExpense.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="493">
           <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/template/header.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/template/sidebar.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
+        <state relative-caret-position="242">
+          <caret line="41" column="30" selection-start-line="34" selection-start-column="24" selection-end-line="41" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/viewExpense.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1043">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
           <folding />
         </state>
       </provider>
