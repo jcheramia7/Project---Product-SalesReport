@@ -29,10 +29,10 @@ form h1 {
 
 form {
     border-radius: 5px;
-    max-width:700px;
+    max-width:850px;
     width:100%;
     margin: 5% auto;
-    background-color: #FFFFFF;
+    background-color: transparent;
     overflow: hidden;
 
 }
@@ -108,7 +108,7 @@ i {
     background-color: #81BDA4;
     color: #FFF;
     text-align: center;
-    width:100%;
+    width:30%;
     max-width:700px;
     border:0;
     padding: 17px 25px;
@@ -118,7 +118,7 @@ i {
 }
 
 .button {
-    margin-left: 7%;
+    margin-left: 35%;
     margin-top: auto;
 }
 
