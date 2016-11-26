@@ -12,6 +12,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
+    <h:outputStylesheet name="add-sale-form.css" library="css"/>
     <title>Add Sales</title>
 </h:head>
 
@@ -25,7 +26,72 @@
                 </div>
                 <!--End Page Header -->
             </div>
-            <h1>Sample text ^_^</h1>
+            <form>
+                <h1>Please Fill up fields to add sales</h1>
+
+                <div class="contentform">
+
+                    <div class="leftcontact">
+                        <div class="form-group">
+                            <p>Date</p>
+                            <input type="date" name="date" id="date" data-rule="required"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Gross Sales </p>
+                            <input type="number" name="grossSale" id="grossSale"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Bread </p>
+                            <input type="number" name="bread" id="bread"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Grocery </p>
+                            <input type="number" name="grocery" id="grocery"/>
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="rightcontact">
+
+                        <div class="form-group">
+                            <p>E-Load</p>
+                            <input type="number" name="load" id="load"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Smart </p>
+                            <input type="number" name="smart" id="smart"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Globe</p>
+                            <input type="number" name="globe" id="globe"/>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <p>Sun:</p>
+                            <input type="number" name="sun" id="sun"/>
+                            <div class="validation"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="button">
+                <button type="submit" class="bouton-add">Add Sales</button>
+            </div>
         </ui:define>
     </ui:composition>
 </h:body>
