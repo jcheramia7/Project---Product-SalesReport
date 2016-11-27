@@ -1921,6 +1921,9 @@ label {
     border-color: #41cac0;
 }
 
+#login-page{
+
+}
 
 
 /*LOGIN CONFIGURATION PAGE*/
@@ -1930,6 +1933,9 @@ label {
 	background: #fff;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 24px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 24px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 24px 5px rgba(0,0,0,0.75);
 }
 
 .form-login h2.form-login-heading {
