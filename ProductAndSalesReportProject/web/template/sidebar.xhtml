@@ -14,62 +14,116 @@
 
 <h:body>
     <ui:composition>
-        <ul class="nav" id="side-menu">
-                    <li>
-                        <!-- user image section-->
-                        <div class="user-section">
-                            <div class="user-section-inner">
-                                <h:graphicImage library="img" name="user.jpg"/>
-                            </div>
-                            <div class="user-info">
-                                <div>Entjey <strong>For</strong></div>
-                                <div class="user-text-online">
-                                    <span class="user-circle-online btn btn-success btn-circle "></span>Online
-                                </div>
-                            </div>
-                        </div>
-                        <!--end user image section-->
-                    </li>
-                    <li class="sidebar-search">
-                        <!-- search section-->
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search..."></input>
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!--end search section-->
-                    </li>
-                    <li>
-                        <h:link outcome="viewSale">
-                            <i class="fa fa-money fa-2x"/>&#160;&#160;&#160;Sales
-                        </h:link>
-                    </li>
-                    <li>
-                        <h:link outcome="viewExpense">
-                            <i class="fa fa-shopping-basket fa-2x"/>&#160;&#160;&#160;Expenses
-                        </h:link>
-                    </li>
-                    <li>
-                        <h:link outcome="graph">
-                            <i class="fa fa-area-chart fa-2x"/>&#160;&#160;&#160;Graph
-                        </h:link>
-                    </li>
+        <p class="centered">
+            <h:link outcome="profile">
+                <h:graphicImage library="img" name="ui-sam.jpg"/>
+            </h:link>
+        </p>
+        <h5 class="centered">Marcel Newman</h5>
 
-                    <li>
-                        <h:link outcome="viewProduct">
-                            <i class="fa fa-shopping-cart fa-2x"/>&#160;&#160;&#160;Product
-                        </h:link>
-                    </li>
-                    <li>
-                        <h:link outcome="addCategory">
-                            <i class="fa fa-th-list fa-2x"/>&#160;&#160;&#160;Category
-                        </h:link>
-                    </li>
+        <li class="mt">
+            <h:link outcome="index" styleClass="active">
+                <i class="fa fa-dashboard"></i>
+                <span>HOME</span>
+            </h:link>
+        </li>
 
-        </ul>
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="fa fa-desktop"></i>
+                <span>Sales</span>
+            </a>
+            <ul class="sub">
+                <li>
+                    <h:link outcome="addSale">
+                        Add Sales
+                    </h:link>
+                </li>
+
+                <li>
+                    <h:link outcome="viewSale">
+                        View Sales
+                    </h:link>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="fa fa-cogs"></i>
+                <span>Expenses</span>
+            </a>
+            <ul class="sub">
+
+                <li>
+                    <h:link outcome="addExpense">
+                        Add Expenses
+                    </h:link>
+                </li>
+
+                <li>
+                    <h:link outcome="viewExpense">
+                        View Expenses
+                    </h:link>
+                </li>
+            </ul>
+        </li>
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="fa fa-book"></i>
+                <span>Graph</span>
+            </a>
+            <ul class="sub">
+
+                <li>
+                    <h:link outcome="graph">
+                        View Graph
+                    </h:link>
+                </li>
+            </ul>
+        </li>
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="fa fa-tasks"></i>
+                <span>Categories</span>
+            </a>
+            <ul class="sub">
+                <li>
+                    <h:link outcome="addCategory">
+                        Add Category
+                    </h:link>
+                </li>
+
+                <li>
+                    <h:link outcome="viewCategory">
+                        View Category
+                    </h:link>
+                </li>
+
+            </ul>
+        </li>
+        <li class="sub-menu">
+            <a href="javascript:;" >
+                <i class="fa fa-th"></i>
+                <span>Products</span>
+            </a>
+            <ul class="sub">
+
+                <li>
+                    <h:link outcome="addProduct">
+                        Add Products
+                    </h:link>
+                </li>
+
+                <li>
+                    <h:link outcome="viewProduct">
+                        View Products
+                    </h:link>
+                </li>
+
+            </ul>
+        </li>
 
     </ui:composition>
 </h:body>

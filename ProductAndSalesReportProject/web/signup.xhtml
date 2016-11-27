@@ -1,69 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Created by IntelliJ IDEA.
-  User: student
-  Date: 11/24/2016
-  Time: 11:57 AM
+  User: johanna marisse heramia
+  Date: 17/11/2016
+  Time: 8:43 PM
 -->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
-    <title>Signup</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <h:outputStylesheet name="style.css" library="css"/>
-    <h:outputStylesheet name="font-awesome.css" library="css"/>
-    <h:outputStylesheet name="pace-theme-big-counter.css" library="css"/>
     <h:outputStylesheet name="bootstrap.css" library="css"/>
-    <h:outputStylesheet name="main-style.css" library="css"/>
+    <h:outputStylesheet name="font-awesome.css" library="css"/>
+    <h:outputStylesheet name="jquery.gritter.css" library="css"/>
+    <h:outputStylesheet name="style.css" library="css"/>
+    <h:outputStylesheet name="style2.css" library="css"/>
+    <h:outputStylesheet name="style-responsive.css" library="css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+
 </h:head>
 
-<h:body class = "body-Login-back">
-    <div class  ="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4 text-center logo-margin ">
-                <h:graphicImage library="img" name="login.png"/>
-            </div>
-            <div class="col-md-4 col-md-offset-4">
-                <br></br>
-                <hr></hr>
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"> Sign Up Here:</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Username" name="username" type="text" autofocus=""/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" autofocus=""/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Email" name="email" type="email" autofocus=""/>
-                                </div>
+<h:body>
+    <div id="login-page">
+        <div class="container">
+            <form class="form-login" action="index.html">
+                <h2 class="form-login-heading">sign up now</h2>
+                <div class="login-wrap">
+                    <input type="text" class="form-control" placeholder="Username" /> <!-- must be autofocus -->
+                    <br/>
+                    <input type="password" class="form-control" placeholder="Email"/>
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Password" /> <!-- must be autofocus -->
+                    <br/><br/>
 
-                                <!-- Change this to a button or input when using this as a form -->
-                                <h:link value="Sign up" outcome="index" styleClass="btn btn-lg btn-success btn-block"/>
-                            </fieldset>
-                        </form>
-                    </div>
+                    <h:link outcome="index" styleClass="btn btn-theme btn-block"><i class="fa fa-user"/>&#160;&#160;&#160;SIGN UP</h:link>
                 </div>
-            </div>
+
+
+
+            </form>
+
         </div>
     </div>
 
     <!-- JS -->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"/>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"/>
 
-
-
+    <h:outputScript name="jquery.js" library="js"/>
     <h:outputScript name="bootstrap.min.js" library="js"/>
-    <h:outputScript name="jquery.metisMenu.js" library="js"/>
-    <h:outputScript name="jquery-1.10.2.js" library="js"/>
+    <h:outputScript name="jquery.backstretch.min.js" library="js"/>
+    <script>
+        $.backstretch("img/login-bg.jpg", {speed: 500});
+    </script>
+
+   
 </h:body>
 
 </html>

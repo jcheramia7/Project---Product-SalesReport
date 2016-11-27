@@ -14,44 +14,26 @@
 
 <h:body>
     <ui:composition>
-            <!-- navbar-header -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h:link styleClass="navbar-brand" outcome="index">
-                    <h:graphicImage library="img" name="login.png"/>
-                </h:link>
-            </div>
-            <!-- end navbar-header -->
-            <!-- navbar-top-links -->
-            <ul class="nav navbar-top-links navbar-right">
-                <!-- main dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-3x"/>
-                    </a>
-                    <!-- dropdown user-->
-                    <ul class="dropdown-menu dropdown-user">
-                        <li>
-                            <h:link outcome="profile"><i class="fa fa-user fa-fw"/>User Profile</h:link>
-                        </li>
-                        <li>
-                            <h:link outcome="setting"><i class="fa fa-gear fa-fw"/>Setting</h:link>
-                        </li>
-                        <li class="divider"/>
-                        <li>
-                            <h:link outcome="login"><i class="fa fa-sign-out fa-fw"/>Logout</h:link>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-user -->
+        <!-- navbar-header -->
+        <div class="sidebar-toggle-box">
+            <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        </div>
+        <!--logo start-->
+        <h:link styleClass="logo" outcome="index">
+            <b>ELOUS STORE</b>
+        </h:link>
+
+        <!--logo end-->
+        <div class="nav notify-row" id="top_menu"/>
+        <div class="top-menu">
+            <ul class="nav pull-right top-menu">
+                <li>
+                    <h:link outcome="login" styleClass="logout">
+                        Logout
+                    </h:link>
                 </li>
-                <!-- end main dropdown -->
             </ul>
-            <!-- end navbar-top-links -->
+        </div>
 
     </ui:composition>
 </h:body>

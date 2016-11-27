@@ -11,53 +11,78 @@
     <title>Main layout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <h:outputStylesheet name="style.css" library="css"/>
-    <h:outputStylesheet name="pace-theme-big-counter.css" library="css"/>
-    <h:outputStylesheet name="morris-0.4.3.min.css" library="css"/>
-    <h:outputStylesheet name="font-awesome.css" library="css"/>
+
     <h:outputStylesheet name="bootstrap.css" library="css"/>
-    <h:outputStylesheet name="main-style.css" library="css"/>
+    <h:outputStylesheet name="font-awesome.css" library="css"/>
+    <h:outputStylesheet name="zabuto_calendar.css" library="css"/>
+    <h:outputStylesheet name="jquery.gritter.css" library="css"/>
+    <h:outputStylesheet name="style.css" library="css"/>
+    <h:outputStylesheet name="style2.css" library="css"/>
+    <h:outputStylesheet name="style-responsive.css" library="css"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
 
 </h:head>
 
 <h:body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+    <section id="container">
+        <header class="header black-bg">
             <ui:insert name="header">
                 <ui:include src="header.xhtml"/>
             </ui:insert>
-        </nav>
-        <nav class="navbar-default navbar-static-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="side-menu">
+        </header>
+
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <ul class="sidebar-menu" id="nav-accordion">
                     <ui:insert name="sidebar">
                         <ui:include src="sidebar.xhtml"/>
                     </ui:insert>
                 </ul>
             </div>
-        </nav>
+        </aside>
+
         <!--  page-wrapper -->
-        <div id="page-wrapper">
+        <section id="main-content">
+            <section class="wrapper site-min-height">
                 <ui:insert name="content">
                     <ui:include src="content.xhtml"/>
                 </ui:insert>
-        </div>
+            </section>
+        </section>
         <!-- end page-wrapper -->
-    </div>
+
+        <footer class="site-footer">
+            <ui:insert name="footer">
+                <ui:include src="footer.xhtml"/>
+            </ui:insert>
+        </footer>
+    </section>
 
     <!-- JS -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"/>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootsrtap.min.js"/>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"/>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"/>
+
+    <h:outputScript name="Chart.js" library="js"/>
+    <h:outputScript name="jquery.js" library="js"/>
+    <h:outputScript name="jquery-1.8.3.min.js" library="js"/>
     <h:outputScript name="bootstrap.min.js" library="js"/>
-    <h:outputScript name="dashboard-demo.js" library="js"/>
-    <h:outputScript name="jquery.metisMenu.js" library="js"/>
-    <h:outputScript name="jquery-1.10.2.js" library="js"/>
-    <h:outputScript name="morris.js" library="js"/>
-    <h:outputScript name="pace.js" library="js"/>
-    <h:outputScript name="raphael-2.1.0.min.js" library="js"/>
-    <h:outputScript name="siminta.js" library="js"/>
+    <h:outputScript name="jquery.dcjqaccordion.2.7.js" library="js"/>
+    <h:outputScript name="jquery.scrollTo.min.js" library="js"/>
+    <h:outputScript name="jquery.nicescroll.js" library="js"/>
+    <h:outputScript name="jquery.sparkline.js" library="js"/>
+    <h:outputScript name="common-scripts.js" library="js"/>
+    <h:outputScript name="jquery.gritter.js" library="js"/>
+    <h:outputScript name="jquery.gritter.min.js" library="js"/>
+    <h:outputScript name="gritter-conf.js" library="js"/>
+    <h:outputScript name="sparkline-chart.js" library="js"/>
+    <h:outputScript name="zabuto_calendar.js" library="js"/>
+    <h:outputScript name="style3.js" library="js"/>
+    <h:outputScript name="style4.js" library="js"/>
+
+
+
 </h:body>
 
 </html>
