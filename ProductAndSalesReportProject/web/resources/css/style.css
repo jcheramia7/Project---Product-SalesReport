@@ -10,6 +10,14 @@
 	font-style: normal;
 }
 
+.homeWelcome{
+	color: whitesmoke;
+	font-size: 50px;
+	background-color: #323745;
+	width: 50%;
+	margin-left:25%;
+	border-radius: 3px;
+}
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'linecons';
