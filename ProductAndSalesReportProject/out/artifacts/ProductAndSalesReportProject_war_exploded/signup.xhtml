@@ -10,10 +10,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
 <h:head>
-    <title>Login</title>
+    <title>Signup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <h:outputStylesheet name="bootstrap.css" library="css"/>
     <h:outputStylesheet name="font-awesome.css" library="css"/>
@@ -31,22 +32,19 @@
 <h:body>
     <div id="login-page">
         <div class="container">
-            <form class="form-login" action="index.html">
+            <h:form class="form-login" action="index.html">
                 <h2 class="form-login-heading">sign up now</h2>
                 <div class="login-wrap">
-                    <input type="text" class="form-control" placeholder="Username" /> <!-- must be autofocus -->
+                    <h:inputText value="#{signupBean.userUsername}" styleClass="form-control" a:placeholder="Username" a:autofocus="true"/>
                     <br/>
-                    <input type="password" class="form-control" placeholder="Email"/>
+                    <h:inputText value="#{signupBean.userEmail}" styleClass="form-control" a:placeholder="Email"/>
                     <br/>
-                    <input type="text" class="form-control" placeholder="Password" /> <!-- must be autofocus -->
+                    <h:inputSecret value="#{signupBean.userPassword}" styleClass="form-control" a:placeholder="Password"/>
                     <br/><br/>
 
                     <h:link outcome="index" styleClass="btn btn-theme btn-block"><i class="fa fa-user"/>&#160;&#160;&#160;SIGN UP</h:link>
                 </div>
-
-
-
-            </form>
+            </h:form>
 
         </div>
     </div>

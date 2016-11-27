@@ -9,7 +9,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
 <h:head>
     <h:outputStylesheet name="form.css" library="css"/>
@@ -33,13 +33,13 @@
                     <!-- Left Column Form -->
                     <div class="leftcontact">
                         <div class="form-group">
-                            <p>Name</p>
-                            <input type="text" name="name" id="name" data-rule="required"/>
+                            <p>Name of Product: </p>
+                            <h:inputText value="#{productBean.productName}" a:placeholder="What's the name of product"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Category</p>
-                            <input type="text" name="category" id="category"/>
+                            <h:inputText value="#{productBean.productCategory}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">

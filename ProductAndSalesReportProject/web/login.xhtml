@@ -10,7 +10,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 
 <h:head>
     <title>Login</title>
@@ -31,12 +32,12 @@
 <h:body>
     <div id="login-page">
         <div class="container">
-            <form class="form-login" action="index.html">
+            <h:form styleClass="form-login" target="index">
                 <h2 class="form-login-heading">sign in now</h2>
                 <div class="login-wrap">
-                    <input type="text" class="form-control" placeholder="User ID" /> <!-- must be autofocus -->
+                    <h:inputText styleClass="form-control" a:placeholder="Username" a:autofocus="true"/> <!-- must be autofocus -->
                     <br/>
-                    <input type="password" class="form-control" placeholder="Password"/>
+                    <h:inputSecret styleClass="form-control" a:placeholder="Password"/>
                     <label class="checkbox">
 		                <span class="pull-right">
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
@@ -64,7 +65,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>Enter your e-mail address below to reset your password.</p>
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix"/>
+                                <h:inputText value="" a:placeholder="Email" a:autocomplete="off" styleClass="form-control placeholder-no-fix"/>
 
                             </div>
                             <div class="modal-footer">
@@ -75,8 +76,7 @@
                     </div>
                 </div>
                 <!-- modal -->
-
-            </form>
+            </h:form>
 
         </div>
     </div>
