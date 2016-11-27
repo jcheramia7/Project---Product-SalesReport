@@ -24,13 +24,24 @@
         </h:link>
 
         <!--logo end-->
-        <div class="nav notify-row" id="top_menu"/>
+        <div class="nav notify-row" id="top_menu"></div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
                 <li>
-                    <h:link outcome="login" styleClass="logout">
+                   <!-- <h:link outcome="login" styleClass="logout">
                         Logout
-                    </h:link>
+                    </h:link>--><br/>
+
+                    <button type="button" class="btn btn-theme dropdown-toggle" data-toggle="dropdown">
+                       Profile <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+
                 </li>
             </ul>
         </div>

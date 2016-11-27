@@ -3132,7 +3132,7 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 110px;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;
@@ -4808,7 +4808,7 @@ a.thumbnail.active {
   margin: 0 0 5px;
 }
 .media > .pull-left {
-  margin-right: 10px;
+  margin-right: px;
 }
 .media > .pull-right {
   margin-left: 10px;
@@ -5960,6 +5960,7 @@ button.close {
 }
 .pull-right {
   float: right !important;
+  margin-right: 40px;
 }
 .pull-left {
   float: left !important;
