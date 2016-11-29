@@ -10,8 +10,12 @@
         <element id="directory" name="lib">
           <element id="library" level="application" name="Mojarra-2.2.1" />
           <element id="library" level="project" name="net.bootsfaces:bootsfaces:0.9.1" />
+          <element id="library" level="project" name="org.hibernate:hibernate-java8:5.2.5.Final" />
+          <element id="library" level="project" name="org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:6.0.5" />
         </element>
       </element>
+      <element id="jpa-descriptors" facet="ProductAndSalesReportProject/jpa/JPA" />
     </root>
   </artifact>
 </component>
