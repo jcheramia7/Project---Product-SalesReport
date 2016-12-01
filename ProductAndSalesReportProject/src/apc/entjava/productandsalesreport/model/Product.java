@@ -1,8 +1,13 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by Renzo on 21/11/2016.
  */
+
+@Entity
 public class Product {
 
     private int id;
@@ -30,6 +35,7 @@ public class Product {
         this.image = image;
     }
 
+    @Id
     public int getId() {
         return id;
     }

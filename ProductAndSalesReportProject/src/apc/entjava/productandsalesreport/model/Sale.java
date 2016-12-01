@@ -1,8 +1,12 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by Renzo on 21/11/2016.
  */
+@Entity
 public class Sale {
 
     private int id;
@@ -30,6 +34,7 @@ public class Sale {
         this.sun = sun;
     }
 
+    @Id
     public int getId() {
         return id;
     }

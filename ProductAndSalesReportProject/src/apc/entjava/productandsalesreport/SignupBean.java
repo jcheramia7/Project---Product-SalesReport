@@ -1,6 +1,8 @@
 package apc.entjava.productandsalesreport;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * Created by student on 9/26/2016.

@@ -1,8 +1,13 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by Renzo on 21/11/2016.
  */
+
+@Entity
 public class User {
 
     private int id;
@@ -22,6 +27,7 @@ public class User {
         this.createTime = createTime;
     }
 
+    @Id
     public int getId() {
         return id;
     }
