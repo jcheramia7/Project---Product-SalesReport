@@ -3,68 +3,65 @@ package apc.entjava.productandsalesreport.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by Renzo on 21/11/2016.
- */
 
 @Entity
 public class User {
 
-    private int id;
-    private String username;
-    private String email;
-    private String password;
-    private String createTime;
+    private int userId;
+    private String userUername;
+    private String userEmail;
+    private String userPassword;
+    private String userCreateTime;
 
     public User() {
     }
 
-    public User(int id, String username, String email, String password, String createTime) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.createTime = createTime;
+    public User(int userId, String userUername, String userEmail, String userPassword, String userCreateTime) {
+        this.userId = userId;
+        this.userUername = userUername;
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        this.userCreateTime = userCreateTime;
     }
 
     @Id
-    public int getId() {
-        return id;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserUername() {
+        return userUername;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserUername(String userUername) {
+        this.userUername = userUername;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public String getCreateTime() {
-        return createTime;
+    public String getUserCreateTime() {
+        return userCreateTime;
     }
 
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setUserCreateTime(String userCreateTime) {
+        this.userCreateTime = userCreateTime;
     }
 }

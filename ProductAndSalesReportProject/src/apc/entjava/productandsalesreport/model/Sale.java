@@ -3,107 +3,104 @@ package apc.entjava.productandsalesreport.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by Renzo on 21/11/2016.
- */
 @Entity
 public class Sale {
 
-    private int id;
-    private String date;
-    private int grossSales;
-    private int bread;
-    private int grocery;
-    private int eLoad;
-    private int smart;
-    private int globe;
-    private int sun;
+    private int saleId;
+    private String saleDate;
+    private int saleGrossSales;
+    private int saleBread;
+    private int saleGrocery;
+    private int saleEload;
+    private int saleSmart;
+    private int saleGlobe;
+    private int saleSun;
 
     public Sale() {
     }
 
-    public Sale(int id, String date, int grossSales, int bread, int grocery, int eLoad, int smart, int globe, int sun) {
-        this.id = id;
-        this.date = date;
-        this.grossSales = grossSales;
-        this.bread = bread;
-        this.grocery = grocery;
-        this.eLoad = eLoad;
-        this.smart = smart;
-        this.globe = globe;
-        this.sun = sun;
+    public Sale(int saleId, String saleDate, int saleGrossSales, int saleBread, int saleGrocery, int saleEload, int saleSmart, int saleGlobe, int saleSun) {
+        this.saleId = saleId;
+        this.saleDate = saleDate;
+        this.saleGrossSales = saleGrossSales;
+        this.saleBread = saleBread;
+        this.saleGrocery = saleGrocery;
+        this.saleEload = saleEload;
+        this.saleSmart = saleSmart;
+        this.saleGlobe = saleGlobe;
+        this.saleSun = saleSun;
     }
 
     @Id
-    public int getId() {
-        return id;
+    public int getSaleId() {
+        return saleId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSaleId(int saleId) {
+        this.saleId = saleId;
     }
 
-    public String getDate() {
-        return date;
+    public String getSaleDate() {
+        return saleDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setSaleDate(String saleDate) {
+        this.saleDate = saleDate;
     }
 
-    public int getGrossSales() {
-        return grossSales;
+    public int getSaleGrossSales() {
+        return saleGrossSales;
     }
 
-    public void setGrossSales(int grossSales) {
-        this.grossSales = grossSales;
+    public void setSaleGrossSales(int saleGrossSales) {
+        this.saleGrossSales = saleGrossSales;
     }
 
-    public int getBread() {
-        return bread;
+    public int getSaleBread() {
+        return saleBread;
     }
 
-    public void setBread(int bread) {
-        this.bread = bread;
+    public void setSaleBread(int saleBread) {
+        this.saleBread = saleBread;
     }
 
-    public int getGrocery() {
-        return grocery;
+    public int getSaleGrocery() {
+        return saleGrocery;
     }
 
-    public void setGrocery(int grocery) {
-        this.grocery = grocery;
+    public void setSaleGrocery(int saleGrocery) {
+        this.saleGrocery = saleGrocery;
     }
 
-    public int geteLoad() {
-        return eLoad;
+    public int getSaleEload() {
+        return saleEload;
     }
 
-    public void seteLoad(int eLoad) {
-        this.eLoad = eLoad;
+    public void setSaleEload(int saleEload) {
+        this.saleEload = saleEload;
     }
 
-    public int getSmart() {
-        return smart;
+    public int getSaleSmart() {
+        return saleSmart;
     }
 
-    public void setSmart(int smart) {
-        this.smart = smart;
+    public void setSaleSmart(int saleSmart) {
+        this.saleSmart = saleSmart;
     }
 
-    public int getGlobe() {
-        return globe;
+    public int getSaleGlobe() {
+        return saleGlobe;
     }
 
-    public void setGlobe(int globe) {
-        this.globe = globe;
+    public void setSaleGlobe(int saleGlobe) {
+        this.saleGlobe = saleGlobe;
     }
 
-    public int getSun() {
-        return sun;
+    public int getSaleSun() {
+        return saleSun;
     }
 
-    public void setSun(int sun) {
-        this.sun = sun;
+    public void setSaleSun(int saleSun) {
+        this.saleSun = saleSun;
     }
 }

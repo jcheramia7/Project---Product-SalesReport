@@ -3,57 +3,53 @@ package apc.entjava.productandsalesreport.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by Renzo on 21/11/2016.
- */
-
 @Entity
 public class Expense {
-    private int id;
-    private String name;
-    private int cost;
-    private String date;
+    private int expenseId;
+    private String expenseName;
+    private int expenseCost;
+    private String expenseDate;
 
     public Expense() {
     }
 
-    public Expense(int id, String name, int cost, String date) {
-        this.id = id;
-        this.name = name;
-        this.cost = cost;
-        this.date = date;
+    public Expense(int expenseId, String expenseName, int expenseCost, String expenseDate) {
+        this.expenseId = expenseId;
+        this.expenseName = expenseName;
+        this.expenseCost = expenseCost;
+        this.expenseDate = expenseDate;
     }
 
     @Id
-    public int getId() {
-        return id;
+    public int getExpenseId() {
+        return expenseId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setExpenseId(int expenseId) {
+        this.expenseId = expenseId;
     }
 
-    public String getName() {
-        return name;
+    public String getExpenseName() {
+        return expenseName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setExpenseName(String expenseName) {
+        this.expenseName = expenseName;
     }
 
-    public int getCost() {
-        return cost;
+    public int getExpenseCost() {
+        return expenseCost;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setExpenseCost(int expenseCost) {
+        this.expenseCost = expenseCost;
     }
 
-    public String getDate() {
-        return date;
+    public String getExpenseDate() {
+        return expenseDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setExpenseDate(String expenseDate) {
+        this.expenseDate = expenseDate;
     }
 }

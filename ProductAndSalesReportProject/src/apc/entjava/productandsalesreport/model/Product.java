@@ -3,108 +3,104 @@ package apc.entjava.productandsalesreport.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by Renzo on 21/11/2016.
- */
-
 @Entity
 public class Product {
 
-    private int id;
-    private String name;
-    private int quantity;
-    private int weight;
-    private int cost;
-    private int price;
-    private String expirationDate;
-    private int alertQuantity;
-    private String image;
+    private int productId;
+    private String productName;
+    private int productQuantity;
+    private int productWeight;
+    private int productCost;
+    private int productPrice;
+    private String productExpirationDate;
+    private int productAlertQuantity;
+    private String productImage;
 
     public Product() {
     }
 
-    public Product(int id, String name, int quantity, int weight, int cost, int price, String expirationDate, int alertQuantity, String image) {
-        this.id = id;
-        this.name = name;
-        this.quantity = quantity;
-        this.weight = weight;
-        this.cost = cost;
-        this.price = price;
-        this.expirationDate = expirationDate;
-        this.alertQuantity = alertQuantity;
-        this.image = image;
+    public Product(int productId, String productName, int productQuantity, int productWeight, int productCost, int productPrice, String productExpirationDate, int productAlertQuantity, String productImage) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productQuantity = productQuantity;
+        this.productWeight = productWeight;
+        this.productCost = productCost;
+        this.productPrice = productPrice;
+        this.productExpirationDate = productExpirationDate;
+        this.productAlertQuantity = productAlertQuantity;
+        this.productImage = productImage;
     }
 
     @Id
-    public int getId() {
-        return id;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public String getName() {
-        return name;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getProductQuantity() {
+        return productQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setProductQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;
     }
 
-    public int getWeight() {
-        return weight;
+    public int getProductWeight() {
+        return productWeight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setProductWeight(int productWeight) {
+        this.productWeight = productWeight;
     }
 
-    public int getCost() {
-        return cost;
+    public int getProductCost() {
+        return productCost;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
+    public void setProductCost(int productCost) {
+        this.productCost = productCost;
     }
 
-    public int getPrice() {
-        return price;
+    public int getProductPrice() {
+        return productPrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setProductPrice(int productPrice) {
+        this.productPrice = productPrice;
     }
 
-    public String getExpirationDate() {
-        return expirationDate;
+    public String getProductExpirationDate() {
+        return productExpirationDate;
     }
 
-    public void setExpirationDate(String expirationDate) {
-        this.expirationDate = expirationDate;
+    public void setProductExpirationDate(String productExpirationDate) {
+        this.productExpirationDate = productExpirationDate;
     }
 
-    public int getAlertQuantity() {
-        return alertQuantity;
+    public int getProductAlertQuantity() {
+        return productAlertQuantity;
     }
 
-    public void setAlertQuantity(int alertQuantity) {
-        this.alertQuantity = alertQuantity;
+    public void setProductAlertQuantity(int productAlertQuantity) {
+        this.productAlertQuantity = productAlertQuantity;
     }
 
-    public String getImage() {
-        return image;
+    public String getProductImage() {
+        return productImage;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
     }
 }
