@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class User {
 
     private int userId;
-    private String userUername;
+    private String userUsername;
     private String userEmail;
     private String userPassword;
     private String userCreateTime;
@@ -16,9 +16,9 @@ public class User {
     public User() {
     }
 
-    public User(int userId, String userUername, String userEmail, String userPassword, String userCreateTime) {
+    public User(int userId, String userUsername, String userEmail, String userPassword, String userCreateTime) {
         this.userId = userId;
-        this.userUername = userUername;
+        this.userUsername = userUsername;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
         this.userCreateTime = userCreateTime;
@@ -33,12 +33,12 @@ public class User {
         this.userId = userId;
     }
 
-    public String getUserUername() {
-        return userUername;
+    public String getUserUsername() {
+        return userUsername;
     }
 
-    public void setUserUername(String userUername) {
-        this.userUername = userUername;
+    public void setUserUsername(String userUsername) {
+        this.userUsername = userUsername;
     }
 
     public String getUserEmail() {

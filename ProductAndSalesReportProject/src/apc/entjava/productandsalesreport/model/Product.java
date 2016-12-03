@@ -2,6 +2,7 @@ package apc.entjava.productandsalesreport.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 public class Product {
@@ -10,8 +11,8 @@ public class Product {
     private String productName;
     private int productQuantity;
     private int productWeight;
-    private int productCost;
-    private int productPrice;
+    private BigDecimal productCost;
+    private BigDecimal productPrice;
     private String productExpirationDate;
     private int productAlertQuantity;
     private String productImage;
@@ -19,7 +20,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(int productId, String productName, int productQuantity, int productWeight, int productCost, int productPrice, String productExpirationDate, int productAlertQuantity, String productImage) {
+    public Product(int productId, String productName, int productQuantity, int productWeight, BigDecimal productCost, BigDecimal productPrice, String productExpirationDate, int productAlertQuantity, String productImage) {
         this.productId = productId;
         this.productName = productName;
         this.productQuantity = productQuantity;
@@ -64,19 +65,19 @@ public class Product {
         this.productWeight = productWeight;
     }
 
-    public int getProductCost() {
+    public BigDecimal getProductCost() {
         return productCost;
     }
 
-    public void setProductCost(int productCost) {
+    public void setProductCost(BigDecimal productCost) {
         this.productCost = productCost;
     }
 
-    public int getProductPrice() {
+    public BigDecimal getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(int productPrice) {
+    public void setProductPrice(BigDecimal productPrice) {
         this.productPrice = productPrice;
     }
 

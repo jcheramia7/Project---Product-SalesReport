@@ -1,4 +1,7 @@
 package apc.entjava.productandsalesreport;
+import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
+import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.persistence.Entity;
@@ -41,4 +44,6 @@ public class SignupBean {
     public String signup(){
         return null;
     }
+
+    SalesAndProductReport salesandprod = new SalesAndProduct();
 }

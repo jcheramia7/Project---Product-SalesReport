@@ -1,25 +1,29 @@
 package apc.entjava.productandsalesreport.model;
 
+import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
+import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 public class Sale {
 
     private int saleId;
     private String saleDate;
-    private int saleGrossSales;
-    private int saleBread;
-    private int saleGrocery;
-    private int saleEload;
-    private int saleSmart;
-    private int saleGlobe;
-    private int saleSun;
+    private BigDecimal saleGrossSales;
+    private BigDecimal saleBread;
+    private BigDecimal saleGrocery;
+    private BigDecimal saleEload;
+    private BigDecimal saleSmart;
+    private BigDecimal saleGlobe;
+    private BigDecimal saleSun;
 
     public Sale() {
     }
 
-    public Sale(int saleId, String saleDate, int saleGrossSales, int saleBread, int saleGrocery, int saleEload, int saleSmart, int saleGlobe, int saleSun) {
+    public Sale(int saleId, String saleDate, BigDecimal saleGrossSales, BigDecimal saleBread, BigDecimal saleGrocery, BigDecimal saleEload, BigDecimal saleSmart, BigDecimal saleGlobe, BigDecimal saleSun) {
         this.saleId = saleId;
         this.saleDate = saleDate;
         this.saleGrossSales = saleGrossSales;
@@ -48,59 +52,61 @@ public class Sale {
         this.saleDate = saleDate;
     }
 
-    public int getSaleGrossSales() {
+    public BigDecimal getSaleGrossSales() {
         return saleGrossSales;
     }
 
-    public void setSaleGrossSales(int saleGrossSales) {
+    public void setSaleGrossSales(BigDecimal saleGrossSales) {
         this.saleGrossSales = saleGrossSales;
     }
 
-    public int getSaleBread() {
+    public BigDecimal getSaleBread() {
         return saleBread;
     }
 
-    public void setSaleBread(int saleBread) {
+    public void setSaleBread(BigDecimal saleBread) {
         this.saleBread = saleBread;
     }
 
-    public int getSaleGrocery() {
+    public BigDecimal getSaleGrocery() {
         return saleGrocery;
     }
 
-    public void setSaleGrocery(int saleGrocery) {
+    public void setSaleGrocery(BigDecimal saleGrocery) {
         this.saleGrocery = saleGrocery;
     }
 
-    public int getSaleEload() {
+    public BigDecimal getSaleEload() {
         return saleEload;
     }
 
-    public void setSaleEload(int saleEload) {
+    public void setSaleEload(BigDecimal saleEload) {
         this.saleEload = saleEload;
     }
 
-    public int getSaleSmart() {
+    public BigDecimal getSaleSmart() {
         return saleSmart;
     }
 
-    public void setSaleSmart(int saleSmart) {
+    public void setSaleSmart(BigDecimal saleSmart) {
         this.saleSmart = saleSmart;
     }
 
-    public int getSaleGlobe() {
+    public BigDecimal getSaleGlobe() {
         return saleGlobe;
     }
 
-    public void setSaleGlobe(int saleGlobe) {
+    public void setSaleGlobe(BigDecimal saleGlobe) {
         this.saleGlobe = saleGlobe;
     }
 
-    public int getSaleSun() {
+    public BigDecimal getSaleSun() {
         return saleSun;
     }
 
-    public void setSaleSun(int saleSun) {
+    public void setSaleSun(BigDecimal saleSun) {
         this.saleSun = saleSun;
     }
+
+    SalesAndProductReport salesandprod = new SalesAndProduct();
 }

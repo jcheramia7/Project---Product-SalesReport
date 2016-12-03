@@ -1,5 +1,8 @@
 package apc.entjava.productandsalesreport;
 
+import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
+import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -81,4 +84,6 @@ public class ProductBean {
     public void setProductAlertQuantity(int productAlertQuantity) {
         this.productAlertQuantity = productAlertQuantity;
     }
+
+    SalesAndProductReport salesandprod = new SalesAndProduct();
 }

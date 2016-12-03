@@ -1,5 +1,8 @@
 package apc.entjava.productandsalesreport;
 
+import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
+import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -99,4 +102,6 @@ public class SaleBean {
     public void setConfirmLoad(int confirmLoad) {
         this.confirmLoad = confirmLoad;
     }
+
+    SalesAndProductReport salesandprod = new SalesAndProduct();
 }

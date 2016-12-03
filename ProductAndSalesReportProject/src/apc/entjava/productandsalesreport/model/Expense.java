@@ -2,18 +2,19 @@ package apc.entjava.productandsalesreport.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 public class Expense {
     private int expenseId;
     private String expenseName;
-    private int expenseCost;
+    private BigDecimal expenseCost;
     private String expenseDate;
 
     public Expense() {
     }
 
-    public Expense(int expenseId, String expenseName, int expenseCost, String expenseDate) {
+    public Expense(int expenseId, String expenseName, BigDecimal expenseCost, String expenseDate) {
         this.expenseId = expenseId;
         this.expenseName = expenseName;
         this.expenseCost = expenseCost;
@@ -37,11 +38,11 @@ public class Expense {
         this.expenseName = expenseName;
     }
 
-    public int getExpenseCost() {
+    public BigDecimal getExpenseCost() {
         return expenseCost;
     }
 
-    public void setExpenseCost(int expenseCost) {
+    public void setExpenseCost(BigDecimal expenseCost) {
         this.expenseCost = expenseCost;
     }
 
