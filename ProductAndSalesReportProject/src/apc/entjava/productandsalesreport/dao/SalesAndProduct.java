@@ -9,6 +9,7 @@ import apc.entjava.productandsalesreport.model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 /**
  * Created by Renzo on 21/11/2016.
@@ -21,18 +22,28 @@ public class SalesAndProduct implements SalesAndProductReport{
     }
 
     @Override
-    public User findUser(int id){
+    public List<User> findUser(int id){
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin(); //requirement
 
-        User user = em.createQuery("select u from User u where u.id = :id", User.class)
+
+        List<User> users = em.createQuery("select u from User u where u.userId = :userId", User.class)
+                .setParameter("userId", id)
+                .getResultList();
+
+        em.getTransaction().commit();
+        em.close();
+
+        return users;
+
+        /*User user = em.createQuery("select u from User u where u.id = :id", User.class)
                 .setParameter("id", id)
                 .getSingleResult();
 
         em.getTransaction().commit();
         em.close();
 
-        return user;
+        return user;*/
     }
 
     @Override
