@@ -22,7 +22,7 @@ public class SalesAndProduct implements SalesAndProductReport{
     }
 
     @Override
-    public List<User> findUser(int id){
+    public List<User> listUser(int id){
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin(); //requirement
 
@@ -48,21 +48,43 @@ public class SalesAndProduct implements SalesAndProductReport{
 
     @Override
     public Sale addSale(int id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        Sale sale = em.createQuery("INSERT INTO Sale (saleId, saleDate, saleGrossSales, saleBread, saleGrocery, saleEload, saleSmart, saleGlobe, saleSun)" +
+                                   "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)"; //may error pa
+
+        em.getTransaction().commit();
+        em.close();
         return null;
     }
 
     @Override
-    public Sale findSale(int id) {
+    public List<Sale> listSale(int id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        List<Sale> sales = em.createQuery("select s from Sale s where s.saleId = :saleId", Sale.class)
+                .setParameter("saleId", id)
+                .getResultList();
+
+        em.getTransaction().commit();
+        em.close();
         return null;
     }
 
     @Override
     public Product addProduct(int id) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+
+        em.getTransaction().commit();
+        em.close();
         return null;
     }
 
     @Override
-    public Product findProduct(int id) {
+    public List<Product> listProduct(int id) {
         return null;
     }
 
@@ -72,7 +94,9 @@ public class SalesAndProduct implements SalesAndProductReport{
     }
 
     @Override
-    public Expense findExpense(int id) {
+    public List<Expense> listExpense(int id) {
         return null;
     }
+
+
 }
