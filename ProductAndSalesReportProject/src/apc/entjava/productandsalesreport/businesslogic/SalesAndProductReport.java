@@ -11,14 +11,15 @@ import java.util.List;
  * Created by Renzo on 21/11/2016.
  */
 public interface SalesAndProductReport {
-    public List<User> listUser(int id);
+    public List<User> listUser(int userId);
+    public User login(String userUsername, String userPassword);
 
-    public Sale addSale(int id);
+    /*public Sale addSale(int id);
     public List<Sale> listSale(int id);
 
     public Product addProduct(int id);
     public List<Product> listProduct(int id);
 
     public Expense addExpense(int id);
-    public List<Expense> listExpense(int id);
+    public List<Expense> listExpense(int id);*/
 }

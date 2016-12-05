@@ -22,13 +22,13 @@ public class SalesAndProduct implements SalesAndProductReport{
     }
 
     @Override
-    public List<User> listUser(int id){
+    public List<User> listUser(int userId){
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin(); //requirement
 
 
         List<User> users = em.createQuery("select u from User u where u.userId = :userId", User.class)
-                .setParameter("userId", id)
+                .setParameter("userId", userId)
                 .getResultList();
 
         em.getTransaction().commit();
@@ -46,7 +46,7 @@ public class SalesAndProduct implements SalesAndProductReport{
         return user;*/
     }
 
-    @Override
+    /*@Override
     public Sale addSale(int id) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
@@ -97,6 +97,35 @@ public class SalesAndProduct implements SalesAndProductReport{
     public List<Expense> listExpense(int id) {
         return null;
     }
+*/
 
+    @Override
+    public User login(String userUsername, String userPassword) {
+        EntityManager em = emf.createEntityManager();
+        User user = null;
+        em.getTransaction().begin();
+        try{
+            user = em.createQuery("select u from User u where u.userUsername = :userUsername and u.userPassword = :userPassword", User.class)
+                    .setParameter("userUsername", userUsername)
+                    .setParameter("userPassword", userPassword)
+                    .getSingleResult();
+            em.getTransaction().commit();
+        }finally {
+            em.close();
+        }
+        return user;
+    }
+
+    public void register(User newUser){
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try{
+            em.persist(newUser);
+            em.getTransaction().commit();
+        }catch (Exception e){
+            em.getTransaction().rollback();
+        }
+        em.close();
+    }
 
 }
