@@ -1,6 +1,8 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
@@ -33,6 +35,7 @@ public class Product {
     }
 
     @Id
+    @GeneratedValue
     public int getProductId() {
         return productId;
     }

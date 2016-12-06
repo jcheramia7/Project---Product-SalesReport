@@ -1,6 +1,8 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
@@ -25,6 +27,7 @@ public class User {
     }
 
     @Id
+    @GeneratedValue
     public int getUserId() {
         return userId;
     }
@@ -33,6 +36,7 @@ public class User {
         this.userId = userId;
     }
 
+    @Column(nullable = false, length = 30)
     public String getUserUsername() {
         return userUsername;
     }
@@ -49,6 +53,7 @@ public class User {
         this.userEmail = userEmail;
     }
 
+    @Column(nullable = false)
     public String getUserPassword() {
         return userPassword;
     }

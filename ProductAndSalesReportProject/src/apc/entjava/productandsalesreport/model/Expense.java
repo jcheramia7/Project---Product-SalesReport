@@ -1,6 +1,7 @@
 package apc.entjava.productandsalesreport.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
@@ -22,6 +23,7 @@ public class Expense {
     }
 
     @Id
+    @GeneratedValue
     public int getExpenseId() {
         return expenseId;
     }

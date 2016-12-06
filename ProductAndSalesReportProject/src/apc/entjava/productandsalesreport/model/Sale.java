@@ -4,6 +4,7 @@ import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 
@@ -36,6 +37,7 @@ public class Sale {
     }
 
     @Id
+    @GeneratedValue
     public int getSaleId() {
         return saleId;
     }
