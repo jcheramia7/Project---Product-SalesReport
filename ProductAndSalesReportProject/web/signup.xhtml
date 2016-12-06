@@ -35,11 +35,11 @@
             <h:form class="form-login" action="index.html">
                 <h2 class="form-login-heading">sign up now</h2>
                 <div class="login-wrap">
-                    <h:inputText value="#{signupBean.userUsername}" styleClass="form-control" a:placeholder="Username" a:autofocus="true"/>
+                    <h:inputText value="#{userBean.username}" styleClass="form-control" a:placeholder="Username" a:autofocus="true"/>
                     <br/>
-                    <h:inputText value="#{signupBean.userEmail}" styleClass="form-control" a:placeholder="Email"/>
+                    <h:inputText value="#{userBean.email}" styleClass="form-control" a:placeholder="Email"/>
                     <br/>
-                    <h:inputSecret value="#{signupBean.userPassword}" styleClass="form-control" a:placeholder="Password"/>
+                    <h:inputSecret value="#{userBean.password}" styleClass="form-control" a:placeholder="Password"/>
                     <br/><br/>
 
                     <h:link outcome="index" styleClass="btn btn-theme btn-block"><i class="fa fa-user"/>&#160;&#160;&#160;SIGN UP</h:link>

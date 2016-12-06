@@ -7,12 +7,11 @@ import apc.entjava.productandsalesreport.model.User;
 
 import java.util.List;
 
-/**
- * Created by Renzo on 21/11/2016.
- */
 public interface SalesAndProductReport {
     public List<User> listUser(int userId);
-    public User login(String userUsername, String userPassword);
+
+    void  register(User newUser);
+    User login(String userUsername, String userPassword);
 
     /*public Sale addSale(int id);
     public List<Sale> listSale(int id);
