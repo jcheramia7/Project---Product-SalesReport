@@ -1,9 +1,6 @@
 package apc.entjava.productandsalesreport.dao;
 
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.model.Expense;
-import apc.entjava.productandsalesreport.model.Product;
-import apc.entjava.productandsalesreport.model.Sale;
 import apc.entjava.productandsalesreport.model.User;
 
 import javax.persistence.EntityManager;
@@ -19,7 +16,7 @@ public class SalesAndProduct implements SalesAndProductReport{
         emf =  Persistence.createEntityManagerFactory("ProductSalesDB");
     }
 
-    @Override
+   /* @Override
     public List<User> listUser(int userId){
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin(); //requirement
@@ -34,7 +31,7 @@ public class SalesAndProduct implements SalesAndProductReport{
 
         return users;
 
-    }
+    }*/
 
     @Override
     public void register(User newUser) {

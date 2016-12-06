@@ -8,34 +8,45 @@ import java.io.Serializable;
 
 @Entity
 public class TotalSale implements Serializable{
-    private Sale saleId;
-    private Expense expenseId;
+    private int totalSaleId;
+    private Sale sale;
+    private Expense expense;
 
     public TotalSale() {
     }
 
-    public TotalSale(Sale saleId, Expense expenseId) {
-        this.saleId = saleId;
-        this.expenseId = expenseId;
+    public TotalSale(int totalSaleId, Sale sale, Expense expense) {
+        this.totalSaleId = totalSaleId;
+        this.sale = sale;
+        this.expense = expense;
     }
 
     @Id
+    public int getTotalSaleId() {
+        return totalSaleId;
+    }
+
+    public void setTotalSaleId(int totalSaleId) {
+        this.totalSaleId = totalSaleId;
+    }
+
     @ManyToOne
-    public Sale getSaleId() {
-        return saleId;
+    public Sale getSale() {
+        return sale;
     }
 
-    public void setSaleId(Sale saleId) {
-        this.saleId = saleId;
+    public void setSale(Sale sale) {
+        this.sale = sale;
     }
 
-    @Id
     @ManyToOne
     public Expense getExpenseId() {
-        return expenseId;
+        return expense;
     }
 
     public void setExpenseId(Expense expenseId) {
-        this.expenseId = expenseId;
+        this.expense = expenseId;
     }
+
+
 }

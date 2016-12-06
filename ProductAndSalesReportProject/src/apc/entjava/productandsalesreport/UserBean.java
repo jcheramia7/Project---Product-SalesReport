@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @ManagedBean
 @SessionScoped
 public class UserBean {
-    private SalesAndProduct salesAndProduct = new SalesAndProduct();
+    private SalesAndProductReport salesAndProduct = new SalesAndProduct();
 
     private User user;
     private String username;

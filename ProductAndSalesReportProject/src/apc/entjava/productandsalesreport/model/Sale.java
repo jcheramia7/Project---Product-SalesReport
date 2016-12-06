@@ -114,5 +114,4 @@ public class Sale {
         this.saleSun = saleSun;
     }
 
-    SalesAndProductReport salesandprod = new SalesAndProduct();
 }
