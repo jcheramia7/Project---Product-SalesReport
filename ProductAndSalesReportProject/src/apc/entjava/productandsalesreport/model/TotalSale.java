@@ -1,9 +1,13 @@
 package apc.entjava.productandsalesreport.model;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import java.io.Serializable;
 
-public class TotalSale {
+@Entity
+public class TotalSale implements Serializable{
     private Sale saleId;
     private Expense expenseId;
 
@@ -15,6 +19,7 @@ public class TotalSale {
         this.expenseId = expenseId;
     }
 
+    @Id
     @ManyToOne
     public Sale getSaleId() {
         return saleId;
@@ -24,6 +29,7 @@ public class TotalSale {
         this.saleId = saleId;
     }
 
+    @Id
     @ManyToOne
     public Expense getExpenseId() {
         return expenseId;
