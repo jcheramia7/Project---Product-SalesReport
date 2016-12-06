@@ -1,34 +1,35 @@
 package apc.entjava.productandsalesreport.model;
 
 
+import javax.persistence.ManyToOne;
 
 public class TotalSale {
-    private Sale sale_id;
-    private Expense expense_id;
+    private Sale saleId;
+    private Expense expenseId;
 
     public TotalSale() {
     }
 
-    public TotalSale(Sale sale_id, Expense expense_id) {
-        this.sale_id = sale_id;
-        this.expense_id = expense_id;
+    public TotalSale(Sale saleId, Expense expenseId) {
+        this.saleId = saleId;
+        this.expenseId = expenseId;
     }
 
-
-    public Sale getSale_id() {
-        return sale_id;
+    @ManyToOne
+    public Sale getSaleId() {
+        return saleId;
     }
 
-    public void setSale_id(Sale sale_id) {
-        this.sale_id = sale_id;
+    public void setSaleId(Sale saleId) {
+        this.saleId = saleId;
     }
 
-
-    public Expense getExpense_id() {
-        return expense_id;
+    @ManyToOne
+    public Expense getExpenseId() {
+        return expenseId;
     }
 
-    public void setExpense_id(Expense expense_id) {
-        this.expense_id = expense_id;
+    public void setExpenseId(Expense expenseId) {
+        this.expenseId = expenseId;
     }
 }

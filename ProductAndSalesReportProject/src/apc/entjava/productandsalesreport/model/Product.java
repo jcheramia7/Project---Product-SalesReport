@@ -44,6 +44,7 @@ public class Product {
         this.productId = productId;
     }
 
+    @Column(nullable = false)
     public String getProductName() {
         return productName;
     }
@@ -76,6 +77,7 @@ public class Product {
         this.productCost = productCost;
     }
 
+    @Column(nullable = false)
     public BigDecimal getProductPrice() {
         return productPrice;
     }
@@ -107,4 +109,5 @@ public class Product {
     public void setProductImage(String productImage) {
         this.productImage = productImage;
     }
+
 }

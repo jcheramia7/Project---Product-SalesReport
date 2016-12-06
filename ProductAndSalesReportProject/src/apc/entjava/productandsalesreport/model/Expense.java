@@ -1,5 +1,6 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -32,6 +33,7 @@ public class Expense {
         this.expenseId = expenseId;
     }
 
+    @Column(nullable = false)
     public String getExpenseName() {
         return expenseName;
     }
@@ -40,6 +42,7 @@ public class Expense {
         this.expenseName = expenseName;
     }
 
+    @Column(nullable = false)
     public BigDecimal getExpenseCost() {
         return expenseCost;
     }
@@ -47,6 +50,7 @@ public class Expense {
     public void setExpenseCost(BigDecimal expenseCost) {
         this.expenseCost = expenseCost;
     }
+
 
     public String getExpenseDate() {
         return expenseDate;

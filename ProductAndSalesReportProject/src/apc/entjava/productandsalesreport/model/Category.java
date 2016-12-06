@@ -1,5 +1,6 @@
 package apc.entjava.productandsalesreport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,6 +9,7 @@ import javax.persistence.Id;
 public class Category {
     private int categoryId;
     private String categoryName;
+
 
     public Category() {
     }
@@ -27,6 +29,7 @@ public class Category {
         this.categoryId = categoryId;
     }
 
+    @Column(nullable = false)
     public String getCategoryName() {
         return categoryName;
     }

@@ -3,6 +3,7 @@ package apc.entjava.productandsalesreport.model;
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -46,6 +47,7 @@ public class Sale {
         this.saleId = saleId;
     }
 
+    @Column(nullable = false)
     public String getSaleDate() {
         return saleDate;
     }
@@ -54,6 +56,7 @@ public class Sale {
         this.saleDate = saleDate;
     }
 
+    @Column(nullable = false)
     public BigDecimal getSaleGrossSales() {
         return saleGrossSales;
     }
@@ -78,6 +81,7 @@ public class Sale {
         this.saleGrocery = saleGrocery;
     }
 
+    @Column(nullable = false)
     public BigDecimal getSaleEload() {
         return saleEload;
     }
