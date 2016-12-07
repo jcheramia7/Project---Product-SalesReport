@@ -64,6 +64,20 @@ public class SalesAndProduct implements SalesAndProductReport{
         }
     }
 
+    /*@Override
+    public void addCategory(Category newCategory) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try{
+            em.persist(newCategory);
+            em.getTransaction().commit();
+        }catch (Exception e){
+            em.getTransaction().rollback();
+        }
+        em.close();
+    }*/
+
+
     @Override
     public List<Sale> getSales() {
         EntityManager em = emf.createEntityManager();
@@ -80,6 +94,19 @@ public class SalesAndProduct implements SalesAndProductReport{
             return null;
         }
     }
+
+    /*@Override
+    public void addSale(Sale newSale) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try{
+            em.getTransaction().commit();
+            em.persist(newSale);
+        }catch (Exception e){
+            em.getTransaction().rollback();
+        }
+        em.close();
+    }*/
 
     @Override
     public List<Product> getProducts() {
@@ -98,6 +125,20 @@ public class SalesAndProduct implements SalesAndProductReport{
         }
     }
 
+    /*@Override
+    public void addProduct(Product newProduct) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try{
+            em.persist(newProduct);
+            em.getTransaction().commit();
+        }catch (Exception e){
+            em.getTransaction().rollback();
+        }
+        em.close();
+
+    }*/
+
     @Override
     public List<Expense> getExpenses() {
         EntityManager em = emf.createEntityManager();
@@ -114,6 +155,19 @@ public class SalesAndProduct implements SalesAndProductReport{
             return null;
         }
     }
+
+    /*@Override
+    public void addExpense(Expense newExpense) {
+        EntityManager em = emf.createEntityManager();
+        em.getTransaction().begin();
+        try{
+            em.persist(newExpense);
+            em.getTransaction().commit();
+        }catch (Exception e){
+            em.getTransaction().rollback();
+        }
+        em.close();
+    }*/
 
 
 }

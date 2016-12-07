@@ -21,6 +21,17 @@ public class ExpenseBean {
 
     private List<Expense> expenses;
 
+    public Expense getExpense() {
+        if(this.expense == null){
+            this.expense = new Expense();
+        }
+        return expense;
+    }
+
+    public void setExpense(Expense expense) {
+        this.expense = expense;
+    }
+
     public String getExpenseDate() {
         return expenseDate;
     }
@@ -48,10 +59,6 @@ public class ExpenseBean {
     public List<Expense> getExpenses() {
         expenses = salesAndProductReport.getExpenses();
         return expenses;
-    }
-
-    public Expense getExpense() {
-        return expense;
     }
 
     public String addExpense(){

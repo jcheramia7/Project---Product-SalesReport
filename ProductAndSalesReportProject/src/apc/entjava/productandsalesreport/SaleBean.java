@@ -28,6 +28,17 @@ public class SaleBean {
 
     private List<Sale> sales;
 
+    public Sale getSale() {
+        if(this.sale==null){
+            this.sale = new Sale();
+        }
+        return sale;
+    }
+
+    public void setSale(Sale sale) {
+        this.sale = sale;
+    }
+
     public String getSaleDate() {
         return saleDate;
     }
@@ -111,10 +122,6 @@ public class SaleBean {
     public List<Sale> getSales() {
         sales = salesAndProductReport.getSales();
         return sales;
-    }
-
-    public Sale getSale() {
-        return sale;
     }
 
     public String addSales(){

@@ -34,22 +34,17 @@
                     <div class="leftcontact">
                         <div class="form-group">
                             <p>Name of Product: <span>*</span> </p>
-                            <h:inputText value="#{productBean.productName}" a:placeholder="What's the name of product?"/>
-                            <div class="validation"></div>
-                        </div>
-                        <div class="form-group">
-                            <p>Category</p>
-                            <h:inputText value="#{productBean.productCategory}"/>
+                            <h:inputText value="#{productBean.product.productName}" a:placeholder="What's the name of product?"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Quantity</p>
-                            <h:inputText value="#{productBean.productQuantity}"/>
+                            <h:inputText value="#{productBean.product.productQuantity}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Weight per product: </p>
-                            <h:inputText value="#{productBean.productWeight}"/>
+                            <h:inputText value="#{productBean.product.productWeight}"/>
                             <div class="validation"></div>
                         </div>
                     </div>
@@ -58,22 +53,22 @@
                     <div class="rightcontact">
                         <div class="form-group">
                             <p>Cost per item</p>
-                            <h:inputText value="#{productBean.productCostPerItem}"/>
+                            <h:inputText value="#{productBean.product.productCost}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Price per item</p>
-                            <h:inputText value="#{productBean.productPricePerItem}"/>
+                            <h:inputText value="#{productBean.product.productPrice}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Expiration Date</p>
-                            <h:inputText value="#{productBean.productExpirationDate}"/>
+                            <h:inputText value="#{productBean.product.productExpirationDate}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Alert me when quantity is below</p>
-                            <h:inputText value="#{productBean.productAlertQuantity}"/>
+                            <h:inputText value="#{productBean.product.productAlertQuantity}"/>
                             <div class="validation"></div>
                         </div>
                     </div>

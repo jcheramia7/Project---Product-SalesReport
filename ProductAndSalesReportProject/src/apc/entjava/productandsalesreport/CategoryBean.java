@@ -6,6 +6,7 @@ import apc.entjava.productandsalesreport.model.Category;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
@@ -19,10 +20,18 @@ public class CategoryBean {
 
     private List<Category> categories;
 
-    public String getCategoryName() {
+    public Category getCategory() {
         if(this.category==null){
             this.category = new Category();
         }
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    public String getCategoryName() {
         return categoryName;
     }
 
@@ -35,11 +44,7 @@ public class CategoryBean {
         return categories;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
     public String addCategory(){
-        return null;
+        return ("viewCategory");
     }
 }

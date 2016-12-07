@@ -24,6 +24,17 @@ public class ProductBean {
     private int productAlertQuantity;
     private List<Product> products;
 
+    public Product getProduct() {
+        if(this.product == null){
+            this.product = new Product();
+        }
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
+    }
+
     public String getProductName() {
         return productName;
     }
@@ -93,9 +104,7 @@ public class ProductBean {
         return products;
     }
 
-    public Product getProduct() {
-        return product;
-    }
+
 
     public String addProduct(){
         return null;
