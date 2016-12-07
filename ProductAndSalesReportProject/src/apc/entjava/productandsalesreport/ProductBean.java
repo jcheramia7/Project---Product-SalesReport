@@ -2,13 +2,18 @@ package apc.entjava.productandsalesreport;
 
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.model.Product;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class ProductBean {
+    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+
+    private Product product;
     private String productName;
     private String productCategory;
     private int productQuantity;
@@ -17,6 +22,7 @@ public class ProductBean {
     private double productPricePerItem;
     private String productExpirationDate;
     private int productAlertQuantity;
+    private List<Product> products;
 
     public String getProductName() {
         return productName;
@@ -82,5 +88,16 @@ public class ProductBean {
         this.productAlertQuantity = productAlertQuantity;
     }
 
-    SalesAndProductReport salesandprod = new SalesAndProduct();
+    public List<Product> getProducts() {
+        products = salesAndProductReport.getProducts();
+        return products;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public String addProduct(){
+        return null;
+    }
 }

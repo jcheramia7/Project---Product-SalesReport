@@ -43,7 +43,7 @@
 		                    <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
 		                </span>
                     </label>
-                    <h:link outcome="index" styleClass="btn btn-theme btn-block"><i class="fa fa-lock"/>&#160;&#160;&#160;SIGN IN</h:link>
+                    <h:commandButton value="LOGIN" action="#{userBean.login}" styleClass="btn btn-theme btn-block"/>
                     <hr/>
 
                     <div class="registration">
@@ -65,7 +65,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>Enter your e-mail address below to reset your password.</p>
-                                <h:inputText value="" a:placeholder="Email" a:autocomplete="off" styleClass="form-control placeholder-no-fix"/>
+                                <h:inputText value="#{userBean.email}" a:placeholder="Email" a:autocomplete="off" styleClass="form-control placeholder-no-fix"/>
 
                             </div>
                             <div class="modal-footer">

@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @ManagedBean
 @SessionScoped
 public class UserBean {
-    private SalesAndProductReport salesAndProduct = new SalesAndProduct();
+    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
 
     private User user;
     private String username;
@@ -56,7 +56,7 @@ public class UserBean {
     }
 
     public String login(){
-        this.user = this.salesAndProduct.login(this.username, this.password);
+        this.user = this.salesAndProductReport.login(this.username, this.password);
         if(this.user != null){
             return "index";
         }else {
@@ -66,7 +66,7 @@ public class UserBean {
 
     public String register(){
         if(user.getUserPassword().equals(password)){
-            this.salesAndProduct.register(user);
+            this.salesAndProductReport.register(user);
             return "login";
         }else {
             return "signup";

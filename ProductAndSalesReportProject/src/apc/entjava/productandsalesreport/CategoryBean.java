@@ -2,23 +2,44 @@ package apc.entjava.productandsalesreport;
 
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.model.Category;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class CategoryBean {
 
-    private int categoryName;
+    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
 
-    public int getCategoryName() {
+    private Category category;
+    private String categoryName;
+
+    private List<Category> categories;
+
+    public String getCategoryName() {
+        if(this.category==null){
+            this.category = new Category();
+        }
         return categoryName;
     }
 
-    public void setCategoryName(int categoryName) {
+    public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
 
-    SalesAndProductReport salesandproduct = new SalesAndProduct();
+    public List<Category> getCategories() {
+        categories = salesAndProductReport.getCategories();
+        return categories;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public String addCategory(){
+        return null;
+    }
 }

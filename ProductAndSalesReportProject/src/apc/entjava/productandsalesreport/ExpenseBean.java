@@ -2,16 +2,24 @@ package apc.entjava.productandsalesreport;
 
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.model.Expense;
+import jdk.nashorn.internal.ir.ExpressionStatement;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class ExpenseBean {
+    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+
+    private Expense expense;
     private String expenseDate;
     private int expenseName;
     private int expenseCost;
+
+    private List<Expense> expenses;
 
     public String getExpenseDate() {
         return expenseDate;
@@ -37,5 +45,16 @@ public class ExpenseBean {
         this.expenseCost = expenseCost;
     }
 
-    SalesAndProductReport salesandprod = new SalesAndProduct();
+    public List<Expense> getExpenses() {
+        expenses = salesAndProductReport.getExpenses();
+        return expenses;
+    }
+
+    public Expense getExpense() {
+        return expense;
+    }
+
+    public String addExpense(){
+        return null;
+    }
 }

@@ -2,13 +2,19 @@ package apc.entjava.productandsalesreport;
 
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.model.Sale;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class SaleBean {
+
+    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+
+    private Sale sale;
     private String saleDate;
     private int saleGrossSale;
     private int saleBread;
@@ -19,6 +25,8 @@ public class SaleBean {
     private int saleSun;
     private int confirmGrossSale;
     private int confirmLoad;
+
+    private List<Sale> sales;
 
     public String getSaleDate() {
         return saleDate;
@@ -100,5 +108,16 @@ public class SaleBean {
         this.confirmLoad = confirmLoad;
     }
 
-    SalesAndProductReport salesandprod = new SalesAndProduct();
+    public List<Sale> getSales() {
+        sales = salesAndProductReport.getSales();
+        return sales;
+    }
+
+    public Sale getSale() {
+        return sale;
+    }
+
+    public String addSales(){
+        return null;
+    }
 }
