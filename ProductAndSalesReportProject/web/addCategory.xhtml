@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:b="http://bootsfaces.net/ui">
 
 <h:head>
     <title>Add Category</title>
@@ -36,7 +37,7 @@
             </form>
 
             <div class="button">
-                <h:commandButton action="#{categoryBean.addCategory}" styleClass="bouton-add" value="Add Category"/>
+                <h:commandButton type="submit" action="#{categoryBean.addCategory}" styleClass="bouton-add"  value="Add Category"/>
                 <!--<button type="submit" class="bouton-add">Add Category</button>-->
             </div>
         </ui:define>

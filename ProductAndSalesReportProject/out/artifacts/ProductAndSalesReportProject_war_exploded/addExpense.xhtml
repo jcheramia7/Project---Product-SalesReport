@@ -56,7 +56,8 @@
             </form>
 
             <div class="button">
-                <button type="submit" class="bouton-add">Add More Expenses</button>
+                <h:commandButton action="#{expenseBean.addExpense}" styleClass="bouton-add"  value="Add Expense"/>
+                <!--<button type="submit" class="bouton-add">Add More Expenses</button>-->
             </div>
 
         </ui:define>

@@ -62,6 +62,6 @@ public class ExpenseBean {
     }
 
     public String addExpense(){
-        return null;
+        return "index";
     }
 }
