@@ -1,9 +1,6 @@
 package apc.entjava.productandsalesreport.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -18,11 +15,13 @@ public class Product {
     private String productExpirationDate;
     private int productAlertQuantity;
     private String productImage;
+    private User user;
+    private Category category;
 
     public Product() {
     }
 
-    public Product(int productId, String productName, int productQuantity, int productWeight, BigDecimal productCost, BigDecimal productPrice, String productExpirationDate, int productAlertQuantity, String productImage) {
+    public Product(int productId, String productName, int productQuantity, int productWeight, BigDecimal productCost, BigDecimal productPrice, String productExpirationDate, int productAlertQuantity, String productImage, User user, Category category) {
         this.productId = productId;
         this.productName = productName;
         this.productQuantity = productQuantity;
@@ -32,6 +31,8 @@ public class Product {
         this.productExpirationDate = productExpirationDate;
         this.productAlertQuantity = productAlertQuantity;
         this.productImage = productImage;
+        this.user = user;
+        this.category = category;
     }
 
     @Id
@@ -110,4 +111,21 @@ public class Product {
         this.productImage = productImage;
     }
 
+    @ManyToOne
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @ManyToOne
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }

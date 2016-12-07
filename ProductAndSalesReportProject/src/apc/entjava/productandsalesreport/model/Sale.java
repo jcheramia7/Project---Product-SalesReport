@@ -3,10 +3,7 @@ package apc.entjava.productandsalesreport.model;
 import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
 import apc.entjava.productandsalesreport.dao.SalesAndProduct;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -21,11 +18,12 @@ public class Sale {
     private BigDecimal saleSmart;
     private BigDecimal saleGlobe;
     private BigDecimal saleSun;
+    private User user;
 
     public Sale() {
     }
 
-    public Sale(int saleId, String saleDate, BigDecimal saleGrossSales, BigDecimal saleBread, BigDecimal saleGrocery, BigDecimal saleEload, BigDecimal saleSmart, BigDecimal saleGlobe, BigDecimal saleSun) {
+    public Sale(int saleId, String saleDate, BigDecimal saleGrossSales, BigDecimal saleBread, BigDecimal saleGrocery, BigDecimal saleEload, BigDecimal saleSmart, BigDecimal saleGlobe, BigDecimal saleSun, User user) {
         this.saleId = saleId;
         this.saleDate = saleDate;
         this.saleGrossSales = saleGrossSales;
@@ -35,6 +33,7 @@ public class Sale {
         this.saleSmart = saleSmart;
         this.saleGlobe = saleGlobe;
         this.saleSun = saleSun;
+        this.user = user;
     }
 
     @Id
@@ -114,4 +113,12 @@ public class Sale {
         this.saleSun = saleSun;
     }
 
+    @ManyToOne
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
