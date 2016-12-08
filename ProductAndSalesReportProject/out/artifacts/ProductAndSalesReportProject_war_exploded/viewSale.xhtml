@@ -9,7 +9,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <title>View Sales</title>
@@ -24,6 +24,40 @@
                     <p>Place your content here.</p>
                 </div>
             </div>
+            <h:dataTable>
+                <h:column>
+                    <f:facet name="header">Sale Bread</f:facet>
+                     #{sale.saleBread}
+                 </h:column>
+                <h:column>
+                    <f:facet name="header">Sale Date</f:facet>
+                    #{sale.saleDate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sale ELoad</f:facet>
+                    #{sale.saleEload}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sale Globe</f:facet>
+                    #{sale.saleGlobe}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sale Grocery</f:facet>
+                    #{sale.saleGrocery}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Gross Sale</f:facet>
+                    #{sale.saleGrossSales}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sale Smart</f:facet>
+                    #{sale.saleSmart}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Sale Sun</f:facet>
+                    #{sale.saleSun}
+                </h:column>
+            </h:dataTable>
         </ui:define>
     </ui:composition>
 </h:body>

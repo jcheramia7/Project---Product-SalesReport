@@ -1,7 +1,7 @@
 package apc.entjava.productandsalesreport;
 
-import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.businesslogic.ProductService;
+import apc.entjava.productandsalesreport.dao.ProductDao;
 import apc.entjava.productandsalesreport.model.Product;
 
 import javax.faces.bean.ManagedBean;
@@ -11,7 +11,7 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class ProductBean {
-    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+    private ProductService productService = new ProductDao();
 
     private Product product;
     private String productName;
@@ -100,13 +100,14 @@ public class ProductBean {
     }
 
     public List<Product> getProducts() {
-        products = salesAndProductReport.getProducts();
+        products = productService.getProducts();
         return products;
     }
 
 
 
     public String addProduct(){
-        return null;
+        this.productService.addProduct(product);
+        return ("viewProduct");
     }
 }

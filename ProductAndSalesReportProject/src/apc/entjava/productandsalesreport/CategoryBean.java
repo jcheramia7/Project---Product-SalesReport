@@ -1,19 +1,18 @@
 package apc.entjava.productandsalesreport;
 
-import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.businesslogic.CategoryService;
+import apc.entjava.productandsalesreport.dao.CategoryDao;
 import apc.entjava.productandsalesreport.model.Category;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class CategoryBean {
 
-    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+    private CategoryService categoryService = new CategoryDao();
 
     private Category category;
     private String categoryName;
@@ -40,11 +39,12 @@ public class CategoryBean {
     }
 
     public List<Category> getCategories() {
-        categories = salesAndProductReport.getCategories();
+        categories = categoryService.getCategories();
         return categories;
     }
 
     public String addCategory(){
+        this.categoryService.addCategory(category);
         return ("viewCategory");
     }
 }

@@ -1,8 +1,5 @@
 package apc.entjava.productandsalesreport.model;
 
-import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.dao.SalesAndProduct;
-
 import javax.persistence.*;
 import java.math.BigDecimal;
 

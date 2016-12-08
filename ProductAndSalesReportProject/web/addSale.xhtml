@@ -25,7 +25,7 @@
                     <p>Place your content here.</p>
                 </div>
             </div>
-            <form>
+            <h:form>
                 <div class="contentform">
 
                     <div class="leftcontact">
@@ -83,12 +83,13 @@
 
                     </div>
                 </div>
+                <div class="button">
+                    <h:commandButton action="#{saleBean.addSales}" styleClass="bouton-add" value="add Sales"/>
 
-            </form>
+                </div>
+            </h:form>
 
-            <div class="button">
-                <button type="submit" class="bouton-add">Add Sales</button>
-            </div>
+
         </ui:define>
     </ui:composition>
 </h:body>

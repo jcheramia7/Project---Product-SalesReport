@@ -1,17 +1,15 @@
 package apc.entjava.productandsalesreport;
-import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.businesslogic.UserService;
+import apc.entjava.productandsalesreport.dao.UserDao;
 import apc.entjava.productandsalesreport.model.User;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @ManagedBean
 @SessionScoped
 public class UserBean {
-    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+    private UserService userService = new UserDao();
 
     private User user;
     private String username;
@@ -56,7 +54,7 @@ public class UserBean {
     }
 
     public String login(){
-        this.user = this.salesAndProductReport.login(this.username, this.password);
+        this.user = this.userService.login(this.username, this.password);
         if(this.user != null){
             return "index";
         }else {
@@ -66,10 +64,10 @@ public class UserBean {
 
     public String register(){
         if(user.getUserPassword().equals(password)){
-            this.salesAndProductReport.register(user);
-            return "login";
+            this.userService.register(user);
+            return ("login");
         }else {
-            return "signup";
+            return ("signup");
         }
     }
 }

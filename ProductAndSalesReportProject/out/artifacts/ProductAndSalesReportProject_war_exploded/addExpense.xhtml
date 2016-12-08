@@ -28,7 +28,7 @@
                     <p></p>
                 </div>
             </div>
-            <form>
+            <h:form>
                 <div class="contentform">
                 <div class = "contact">
                     <div class="form-group">
@@ -53,12 +53,14 @@
                     </div>
                 </div>
                 </div>
-            </form>
+                <div class="button">
+                    <h:commandButton action="#{expenseBean.addExpense}" styleClass="bouton-add"  value="Add Expense"/>
+                    <!--<button type="submit" class="bouton-add">Add More Expenses</button>-->
+                </div>
 
-            <div class="button">
-                <h:commandButton action="#{expenseBean.addExpense}" styleClass="bouton-add"  value="Add Expense"/>
-                <!--<button type="submit" class="bouton-add">Add More Expenses</button>-->
-            </div>
+            </h:form>
+
+
 
         </ui:define>
     </ui:composition>

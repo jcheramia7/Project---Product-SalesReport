@@ -22,15 +22,10 @@
             <h2><i class="fa fa-angle-right"></i> Add Products</h2>
             <div class="row mt">
                 <div class="col-lg-12">
-                    <p>Place your content here.</p>
                 </div>
             </div>
-
-            <!-- Main Content -->
             <h:form>
-                <!-- Form -->
                 <div class="contentform">
-                    <!-- Left Column Form -->
                     <div class="leftcontact">
                         <div class="form-group">
                             <p>Name of Product: <span>*</span> </p>
@@ -48,8 +43,6 @@
                             <div class="validation"></div>
                         </div>
                     </div>
-                    <!-- End Left Column Form -->
-                    <!-- Right Column Form -->
                     <div class="rightcontact">
                         <div class="form-group">
                             <p>Cost per item</p>
@@ -72,16 +65,11 @@
                             <div class="validation"></div>
                         </div>
                     </div>
-                    <!-- End Right Column Form -->
                 </div>
-                <!-- End Form -->
+                <div class="button">
+                    <h:commandButton action="#{productBean.addProduct}" styleClass="bouton-add" value="add Product"/>
+                </div>
             </h:form>
-            <!-- End Content Form -->
-            <!-- Button -->
-            <div class="button">
-                <button type="submit" class="bouton-add">Add Product</button>
-            </div>
-            <!-- End Button -->
         </ui:define>
     </ui:composition>
 </h:body>

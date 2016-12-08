@@ -1,7 +1,7 @@
 package apc.entjava.productandsalesreport;
 
-import apc.entjava.productandsalesreport.businesslogic.SalesAndProductReport;
-import apc.entjava.productandsalesreport.dao.SalesAndProduct;
+import apc.entjava.productandsalesreport.businesslogic.SaleService;
+import apc.entjava.productandsalesreport.dao.SaleDao;
 import apc.entjava.productandsalesreport.model.Sale;
 
 import javax.faces.bean.ManagedBean;
@@ -12,7 +12,7 @@ import java.util.List;
 @SessionScoped
 public class SaleBean {
 
-    private SalesAndProductReport salesAndProductReport = new SalesAndProduct();
+    private SaleService saleService = new SaleDao();
 
     private Sale sale;
     private String saleDate;
@@ -120,11 +120,12 @@ public class SaleBean {
     }
 
     public List<Sale> getSales() {
-        sales = salesAndProductReport.getSales();
+        sales = saleService.getSales();
         return sales;
     }
 
     public String addSales(){
-        return null;
+        this.saleService.addSale(sale);
+        return ("viewSale");
     }
 }

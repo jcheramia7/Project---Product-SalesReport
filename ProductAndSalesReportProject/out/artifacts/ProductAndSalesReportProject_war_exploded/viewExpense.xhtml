@@ -38,12 +38,16 @@
 
             <h:dataTable var="expense" value="#{expenseBean.expenses}" border="1">
                 <h:column>
-                    <f:facet name="header">Expense Date</f:facet>
-                    #{expense.expenseName}
-                </h:column>
-                <h:column>
                     <f:facet name="header">Expense Cost</f:facet>
                     #{expense.expenseCost}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Expense Date</f:facet>
+                    #{expense.expenseDate}
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Expense Name</f:facet>
+                    #{expense.expenseName}
                 </h:column>
             </h:dataTable>
         </ui:define>
