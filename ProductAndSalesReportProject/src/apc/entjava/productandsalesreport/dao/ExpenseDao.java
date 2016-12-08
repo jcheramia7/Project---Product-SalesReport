@@ -1,6 +1,4 @@
 package apc.entjava.productandsalesreport.dao;
-
-import apc.entjava.productandsalesreport.businesslogic.CategoryService;
 import apc.entjava.productandsalesreport.businesslogic.ExpenseService;
 import apc.entjava.productandsalesreport.model.Expense;
 

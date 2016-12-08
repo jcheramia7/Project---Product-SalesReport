@@ -6,11 +6,12 @@ import apc.entjava.productandsalesreport.model.Category;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
 @SessionScoped
-public class CategoryBean {
+public class CategoryBean implements Serializable{
 
     private CategoryService categoryService = new CategoryDao();
 
@@ -45,6 +46,6 @@ public class CategoryBean {
 
     public String addCategory(){
         this.categoryService.addCategory(category);
-        return ("viewCategory");
+        return ("viewCategory?faces-redirect=true");
     }
 }

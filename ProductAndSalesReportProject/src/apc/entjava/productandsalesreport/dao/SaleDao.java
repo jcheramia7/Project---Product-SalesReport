@@ -8,9 +8,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
-/**
- * Created by student on 12/8/2016.
- */
 public class SaleDao implements SaleService {
     private EntityManagerFactory emf;
 

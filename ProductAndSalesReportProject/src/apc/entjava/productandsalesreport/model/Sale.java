@@ -43,7 +43,6 @@ public class Sale {
         this.saleId = saleId;
     }
 
-    @Column(nullable = false)
     public String getSaleDate() {
         return saleDate;
     }

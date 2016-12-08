@@ -108,6 +108,6 @@ public class ProductBean {
 
     public String addProduct(){
         this.productService.addProduct(product);
-        return ("viewProduct");
+        return ("viewProduct?faces-redirect=true");
     }
 }

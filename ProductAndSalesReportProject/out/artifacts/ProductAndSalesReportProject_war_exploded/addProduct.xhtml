@@ -22,68 +22,61 @@
             <h2><i class="fa fa-angle-right"></i> Add Products</h2>
             <div class="row mt">
                 <div class="col-lg-12">
-                    <p>Place your content here.</p>
                 </div>
             </div>
-
-            <!-- Main Content -->
             <h:form>
-                <!-- Form -->
                 <div class="contentform">
-                    <!-- Left Column Form -->
                     <div class="leftcontact">
                         <div class="form-group">
                             <p>Name of Product: <span>*</span> </p>
+                            <span class="icon-case"> <i class ="fa fa-shopping-cart fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productName}" a:placeholder="What's the name of product?"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Quantity</p>
+                            <span class="icon-case"> <i class ="fa fa-list-ol fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productQuantity}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Weight per product: </p>
+                            <span class="icon-case"> <i class ="fa fa-balance-scale fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productWeight}"/>
                             <div class="validation"></div>
                         </div>
                     </div>
-                    <!-- End Left Column Form -->
-                    <!-- Right Column Form -->
                     <div class="rightcontact">
                         <div class="form-group">
                             <p>Cost per item</p>
+                            <span class="icon-case"> <i class ="fa fa-money fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productCost}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Price per item</p>
+                            <span class="icon-case"> <i class ="fa fa-money fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productPrice}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Expiration Date</p>
+                            <span class="icon-case"> <i class ="fa fa-calendar-minus-o fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productExpirationDate}"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
                             <p>Alert me when quantity is below</p>
+                            <span class="icon-case"> <i class ="fa fa-sort-amount-desc fa-lg"/></span>
                             <h:inputText value="#{productBean.product.productAlertQuantity}"/>
                             <div class="validation"></div>
                         </div>
                     </div>
-                    <!-- End Right Column Form -->
                 </div>
-                <!-- End Form -->
                 <div class="button">
                     <h:commandButton action="#{productBean.addProduct}" styleClass="bouton-add" value="add Product"/>
-
                 </div>
             </h:form>
-            <!-- End Content Form -->
-            <!-- Button -->
-
-            <!-- End Button -->
         </ui:define>
     </ui:composition>
 </h:body>

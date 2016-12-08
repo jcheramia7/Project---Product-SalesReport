@@ -1,7 +1,7 @@
 package apc.entjava.productandsalesreport.dao;
 
 import apc.entjava.productandsalesreport.businesslogic.UserService;
-import apc.entjava.productandsalesreport.model.*;
+import apc.entjava.productandsalesreport.model.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

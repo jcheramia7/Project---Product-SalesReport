@@ -28,18 +28,16 @@
                         <div class="form-group">
                             <p>Category<span>*</span></p>
                             <span class="icon-case"><i class="fa fa-th-list fa-lg"/></span>
-                            <h:inputText value="#{categoryBean.category.categoryName}" a:placeholder="₱"/>
+                            <h:inputText value="#{categoryBean.category.categoryName}" a:placeholder="e.g. Shampoo, Soap, Noodles, Candy"/>
                             <div class="validation"></div>
                         </div>
 
                     </div>
                 </div>
                 <div class="button">
-                    <h:commandButton type="submit" action="#{categoryBean.addCategory}" styleClass="bouton-add"  value="Add Category"/>
+                    <h:commandButton action="#{categoryBean.addCategory}" styleClass="bouton-add"  value="Add Category"/>
                 </div>
             </h:form>
-
-
         </ui:define>
     </ui:composition>
 </h:body>

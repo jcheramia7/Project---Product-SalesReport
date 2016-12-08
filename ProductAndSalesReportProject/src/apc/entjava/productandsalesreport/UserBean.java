@@ -5,10 +5,11 @@ import apc.entjava.productandsalesreport.model.User;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
 
 @ManagedBean
 @SessionScoped
-public class UserBean {
+public class UserBean implements Serializable{
     private UserService userService = new UserDao();
 
     private User user;
@@ -56,18 +57,18 @@ public class UserBean {
     public String login(){
         this.user = this.userService.login(this.username, this.password);
         if(this.user != null){
-            return "index";
+            return "index?faces-redirect=true";
         }else {
-            return "login";
+            return "login?faces-redirect=true";
         }
     }
 
     public String register(){
         if(user.getUserPassword().equals(password)){
             this.userService.register(user);
-            return ("login");
+            return ("login?faces-redirect=true");
         }else {
-            return ("signup");
+            return ("signup?faces-redirect=true");
         }
     }
 }

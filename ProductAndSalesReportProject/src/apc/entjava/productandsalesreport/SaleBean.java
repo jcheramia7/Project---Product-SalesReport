@@ -126,6 +126,6 @@ public class SaleBean {
 
     public String addSales(){
         this.saleService.addSale(sale);
-        return ("viewSale");
+        return ("viewSale?faces-redirect=true");
     }
 }

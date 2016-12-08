@@ -62,6 +62,6 @@ public class ExpenseBean {
 
     public String addExpense(){
         this.expenseService.addExpense(expense);
-        return ("viewExpense");
+        return ("viewExpense?faces-redirect=true");
     }
 }

@@ -21,35 +21,31 @@
         <ui:define name="content">
             <h2><i class="fa fa-angle-right"></i> List of Expenses:</h2>
             <div class="row mt">
-                <div class="col-lg-12">
-                    <p>Place your content here.</p>
+                <div class = "searchbox">
+                    <div class="form-group">
+                        <span class="icon-case"> <i class="fa fa-search" /></span>
+                        <input type="search" name="search" id="search" />
+                        <div class="validation"></div>
+                    </div>
                 </div>
             </div>
             <!--End Page Header -->
-            <form>
-            <div class = "searchbox">
-            <div class="form-group">
-                <span class="icon-case"> <i class="fa fa-search" /></span>
-                <input type="search" name="search" id="search" />
-                <div class="validation"></div>
-            </div>
-            </div>
-            </form>
-
-            <h:dataTable var="expense" value="#{expenseBean.expenses}" border="1">
-                <h:column>
-                    <f:facet name="header">Expense Cost</f:facet>
-                    #{expense.expenseCost}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Expense Date</f:facet>
-                    #{expense.expenseDate}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Expense Name</f:facet>
-                    #{expense.expenseName}
-                </h:column>
-            </h:dataTable>
+            <h:form>
+                <h:dataTable var="expense" value="#{expenseBean.expenses}" border="1">
+                    <h:column>
+                        <f:facet name="header">Expense Cost</f:facet>
+                        #{expense.expenseCost}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Expense Date</f:facet>
+                        #{expense.expenseDate}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Expense Name</f:facet>
+                        #{expense.expenseName}
+                    </h:column>
+                </h:dataTable>
+            </h:form>
         </ui:define>
     </ui:composition>
 </h:body>

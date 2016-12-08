@@ -20,29 +20,25 @@
     <ui:composition template="template/main.xhtml">
         <ui:define name="content">
             <h2><i class="fa fa-angle-right"></i> List of Categories:</h2>
-            <div class="row mt">
-                <div class="col-lg-12">
-                    <p>Place your content here.</p>
+            <div class = "searchbox">
+                <div class="form-group">
+                    <span class="icon-case"> <i class="fa fa-search" /></span>
+                    <input type="search" name="search" id="search" />
+                    <div class="validation"></div>
                 </div>
             </div>
-            <!--End Page Header -->
-            <form>
-            <div class = "searchbox">
-            <div class="form-group">
-                <span class="icon-case"> <i class="fa fa-search" /></span>
-                <input type="search" name="search" id="search" />
-                <div class="validation"></div>
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <h:form>
+                        <h:dataTable var="category" value="#{categoryBean.categories}" border="1" styleClass="table table-hover">
+                            <h:column>
+                                <f:facet name="header">Category Name</f:facet>
+                                #{category.categoryName}
+                            </h:column>
+                        </h:dataTable>
+                    </h:form>
+                </div>
             </div>
-            </div>
-            </form>
-
-            <h:dataTable var="category" value="#{categoryBean.categories}" border="1">
-                <h:column>
-                    <f:facet name="header">Category Name</f:facet>
-                    #{category.categoryName}
-                </h:column>
-            </h:dataTable>
-
         </ui:define>
     </ui:composition>
 </h:body>
