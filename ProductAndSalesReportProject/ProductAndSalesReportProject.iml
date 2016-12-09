@@ -42,5 +42,6 @@
     <orderEntry type="library" name="org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat-8.5.8" level="application_server_libraries" />
     <orderEntry type="library" name="mysql:mysql-connector-java:6.0.5" level="project" />
+    <orderEntry type="library" name="org.primefaces:primefaces:6.0" level="project" />
   </component>
 </module>
