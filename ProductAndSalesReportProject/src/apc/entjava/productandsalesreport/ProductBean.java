@@ -1,7 +1,10 @@
 package apc.entjava.productandsalesreport;
 
+import apc.entjava.productandsalesreport.businesslogic.CategoryService;
 import apc.entjava.productandsalesreport.businesslogic.ProductService;
+import apc.entjava.productandsalesreport.dao.CategoryDao;
 import apc.entjava.productandsalesreport.dao.ProductDao;
+import apc.entjava.productandsalesreport.model.Category;
 import apc.entjava.productandsalesreport.model.Product;
 
 import javax.faces.bean.ManagedBean;
@@ -15,17 +18,19 @@ import java.util.List;
 @ViewScoped
 public class ProductBean implements Serializable{
     private ProductService productService = new ProductDao();
+    private CategoryService categoryService = new CategoryDao();
 
     private Product product;
     private String productName;
-    private String productCategory;
     private int productQuantity;
     private double productWeight;
     private double productCostPerItem;
     private double productPricePerItem;
     private String productExpirationDate;
     private int productAlertQuantity;
+    private String productImageNeeded;
     private List<Product> products;
+    private List<Category> categories;
 
     public Product getProduct() {
         if(this.product == null){
@@ -44,14 +49,6 @@ public class ProductBean implements Serializable{
 
     public void setProductName(String productName) {
         this.productName = productName;
-    }
-
-    public String getProductCategory() {
-        return productCategory;
-    }
-
-    public void setProductCategory(String productCategory) {
-        this.productCategory = productCategory;
     }
 
     public int getProductQuantity() {
@@ -101,6 +98,20 @@ public class ProductBean implements Serializable{
     public void setProductAlertQuantity(int productAlertQuantity) {
         this.productAlertQuantity = productAlertQuantity;
     }
+
+    public String getProductImageNeeded() {
+        return productImageNeeded;
+    }
+
+    public void setProductImageNeeded(String productImageNeeded) {
+        this.productImageNeeded = productImageNeeded;
+    }
+
+    public List<Category> getCategories() {
+        categories = categoryService.getCategories();
+        return categories;
+    }
+
 
     public List<Product> getProducts() {
         products = productService.getProducts();

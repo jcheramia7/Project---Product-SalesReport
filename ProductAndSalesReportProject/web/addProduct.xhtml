@@ -9,7 +9,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
     <h:outputStylesheet name="form.css" library="css"/>
@@ -45,6 +47,13 @@
                             <h:inputText value="#{productBean.product.productWeight}"/>
                             <div class="validation"></div>
                         </div>
+                        <div class="form-group">
+                            <p>Image: </p>
+                            <span class="icon-case"> <i class ="fa fa-balance-scale fa-lg"/></span>
+                            <h:inputText value="#{productBean.product.productImage}"/>
+                            <div class="validation"></div>
+                        </div>
+
                     </div>
                     <div class="rightcontact">
                         <div class="form-group">
@@ -62,7 +71,7 @@
                         <div class="form-group">
                             <p>Expiration Date</p>
                             <span class="icon-case"> <i class ="fa fa-calendar-minus-o fa-lg"/></span>
-                            <h:inputText value="#{productBean.product.productExpirationDate}"/>
+                            <input type="date" name="date" id="date" data-rule="required"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">
@@ -71,8 +80,17 @@
                             <h:inputText value="#{productBean.product.productAlertQuantity}"/>
                             <div class="validation"></div>
                         </div>
+                        <div class="form-group">
+                            <p>Category:</p>
+                            <span class="icon-case"> <i class ="fa fa-sort-amount-desc fa-lg"/></span>
+                            <h:selectOneMenu value="#{productBean.product.category}" style="width: 50px; height: 50px;">
+                                <f:selectItems value="#{productBean.categories}" var="cat" itemLabel="#{cat.categoryName}" itemValue="#{cat.categoryName}"/>
+                            </h:selectOneMenu>
+                            <div class="validation"></div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="button">
                     <h:commandButton action="#{productBean.addProduct}" styleClass="bouton-add" value="add Product"/>
                 </div>
