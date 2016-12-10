@@ -15,14 +15,16 @@ public class CategoryBean implements Serializable{
 
     private CategoryService categoryService = new CategoryDao();
 
-    private Category category;
+
+    private Category category = new Category();
     private String categoryName;
 
     private List<Category> categories;
 
     public Category getCategory() {
-        if(this.category==null){
+        if(this.category != null){
             this.category = new Category();
+
         }
         return category;
     }

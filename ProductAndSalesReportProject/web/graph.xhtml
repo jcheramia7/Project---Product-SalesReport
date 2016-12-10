@@ -14,6 +14,7 @@
 
 <h:head>
     <title>Graphs</title>
+
 </h:head>
 
 <h:body>
@@ -21,12 +22,10 @@
         <ui:define name="content">
             <h2><i class="fa fa-angle-right"/> View graph</h2>
             <div class="row mt">
-                <p:fieldset legend="Line Chart">
-                    <p:chart type="line" model="#{graphBean.lineModel1}" styleClass="try" responsive="true"/>
-
-                </p:fieldset>
+                    <p:panel header="Header">
+                        <p:chart rendered="true" type="line" model="#{graphBean.lineModel1}" styleClass="try" responsive="true"/>
+                    </p:panel>
             </div>
-
         </ui:define>
     </ui:composition>
 </h:body>

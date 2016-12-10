@@ -8,6 +8,7 @@ import org.primefaces.model.chart.*;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import java.io.Serializable;
 import java.util.List;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * Created by johan on 09/12/2016.
  */
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class GraphBean implements Serializable{
 
     private TotalSaleService totalSaleService = new TotalSaleDao();

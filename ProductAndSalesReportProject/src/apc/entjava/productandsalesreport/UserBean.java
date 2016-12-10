@@ -1,4 +1,5 @@
 package apc.entjava.productandsalesreport;
+
 import apc.entjava.productandsalesreport.businesslogic.UserService;
 import apc.entjava.productandsalesreport.dao.UserDao;
 import apc.entjava.productandsalesreport.model.User;
@@ -12,13 +13,13 @@ import java.io.Serializable;
 public class UserBean implements Serializable{
     private UserService userService = new UserDao();
 
-    private User user;
+    private User user = new User();
     private String username;
     private String password;
     private String email;
 
     public User getUser(){
-        if(this.user==null){
+        if(this.user!= null){
             this.user = new User();
         }
         return user;

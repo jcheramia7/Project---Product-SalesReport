@@ -14,7 +14,7 @@ public class SaleBean {
 
     private SaleService saleService = new SaleDao();
 
-    private Sale sale;
+    private Sale sale = new Sale();
     private String saleDate;
     private int saleGrossSale;
     private int saleBread;
@@ -29,7 +29,7 @@ public class SaleBean {
     private List<Sale> sales;
 
     public Sale getSale() {
-        if(this.sale==null){
+        if(this.sale != null){
             this.sale = new Sale();
         }
         return sale;

@@ -2,7 +2,6 @@ package apc.entjava.productandsalesreport.dao;
 
 import apc.entjava.productandsalesreport.businesslogic.CategoryService;
 import apc.entjava.productandsalesreport.model.Category;
-import apc.entjava.productandsalesreport.model.Sale;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -26,7 +25,6 @@ public class CategoryDao implements CategoryService {
         }catch (Exception e){
             em.getTransaction().rollback();
         }
-
         em.close();
     }
 
