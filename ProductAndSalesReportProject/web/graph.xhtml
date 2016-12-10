@@ -19,10 +19,14 @@
 <h:body>
     <ui:composition template="template/main.xhtml">
         <ui:define name="content">
-            <h2><i class="fa fa-angle-right"></i> View graph</h2>
+            <h2><i class="fa fa-angle-right"/> View graph</h2>
             <div class="row mt">
-                <p:chart type="line" model="#{graphBean.lineModel1}" style="height:300px;" responsive="true"/>
+                <p:fieldset legend="Line Chart">
+                    <p:chart type="line" model="#{graphBean.lineModel1}" styleClass="try" responsive="true"/>
+
+                </p:fieldset>
             </div>
+
         </ui:define>
     </ui:composition>
 </h:body>

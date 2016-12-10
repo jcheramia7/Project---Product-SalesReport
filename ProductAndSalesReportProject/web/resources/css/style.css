@@ -10,6 +10,11 @@
 	font-style: normal;
 }
 
+.try{
+	height:300px;
+	width:500px;
+}
+
 .homeWelcome{
 	color: whitesmoke;
 	font-size: 50px;
