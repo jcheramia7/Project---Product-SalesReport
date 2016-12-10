@@ -6,16 +6,17 @@ import apc.entjava.productandsalesreport.model.Product;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import javax.sql.rowset.serial.SerialArray;
 import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class ProductBean implements Serializable{
     private ProductService productService = new ProductDao();
 
-    private Product product = new Product();
+    private Product product;
     private String productName;
     private String productCategory;
     private int productQuantity;
@@ -27,7 +28,7 @@ public class ProductBean implements Serializable{
     private List<Product> products;
 
     public Product getProduct() {
-        if(this.product != null){
+        if(this.product == null){
             this.product = new Product();
         }
         return product;

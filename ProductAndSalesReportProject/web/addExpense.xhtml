@@ -34,7 +34,8 @@
                     <div class="form-group">
                         <p>Date<span>*</span></p>
                         <span class="icon-case"> <i class ="fa fa-calendar-o fa-lg"/></span>
-                        <input type="date" name="date" id="date" data-rule="required"/>
+                        <h:inputText type="date" name="date" required="true" value="#{expenseBean.expense.expenseDate}"/>
+
                         <div class="validation"></div>
                     </div>
 

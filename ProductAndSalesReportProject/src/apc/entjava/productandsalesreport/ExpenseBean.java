@@ -6,15 +6,18 @@ import apc.entjava.productandsalesreport.model.Expense;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class ExpenseBean implements Serializable{
     private ExpenseService expenseService = new ExpenseDao();
 
-    private Expense expense = new Expense();
+    private Expense expense;
     private String expenseDate;
     private int expenseName;
     private int expenseCost;
@@ -22,7 +25,7 @@ public class ExpenseBean implements Serializable{
     private List<Expense> expenses;
 
     public Expense getExpense() {
-        if(this.expense != null){
+        if(this.expense == null){
             this.expense = new Expense();
         }
         return expense;

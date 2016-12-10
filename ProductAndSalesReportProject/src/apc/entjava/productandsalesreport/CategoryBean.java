@@ -6,23 +6,24 @@ import apc.entjava.productandsalesreport.model.Category;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
-@SessionScoped
+@ViewScoped
 public class CategoryBean implements Serializable{
 
     private CategoryService categoryService = new CategoryDao();
 
 
-    private Category category = new Category();
+    private Category category;
     private String categoryName;
 
     private List<Category> categories;
 
     public Category getCategory() {
-        if(this.category != null){
+        if(this.category == null){
             this.category = new Category();
 
         }

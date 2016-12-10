@@ -6,6 +6,10 @@ import apc.entjava.productandsalesreport.model.User;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.io.Serializable;
 
 @ManagedBean
@@ -13,13 +17,13 @@ import java.io.Serializable;
 public class UserBean implements Serializable{
     private UserService userService = new UserDao();
 
-    private User user = new User();
+    private User user;
     private String username;
     private String password;
     private String email;
 
     public User getUser(){
-        if(this.user!= null){
+        if(this.user == null){
             this.user = new User();
         }
         return user;
@@ -71,5 +75,10 @@ public class UserBean implements Serializable{
         }else {
             return ("signup?faces-redirect=true");
         }
+    }
+
+    public String logout(){
+        ((HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false)).invalidate();
+        return "login";
     }
 }

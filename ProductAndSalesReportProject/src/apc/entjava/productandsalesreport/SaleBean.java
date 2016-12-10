@@ -6,15 +6,17 @@ import apc.entjava.productandsalesreport.model.Sale;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
-@SessionScoped
-public class SaleBean {
+@ViewScoped
+public class SaleBean implements Serializable{
 
     private SaleService saleService = new SaleDao();
 
-    private Sale sale = new Sale();
+    private Sale sale;
     private String saleDate;
     private int saleGrossSale;
     private int saleBread;
@@ -29,7 +31,7 @@ public class SaleBean {
     private List<Sale> sales;
 
     public Sale getSale() {
-        if(this.sale != null){
+        if(this.sale == null){
             this.sale = new Sale();
         }
         return sale;

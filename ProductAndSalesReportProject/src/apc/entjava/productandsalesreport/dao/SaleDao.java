@@ -37,8 +37,8 @@ public class SaleDao implements SaleService {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         try{
-            em.getTransaction().commit();
             em.persist(newSale);
+            em.getTransaction().commit();
         }catch (Exception e){
             em.getTransaction().rollback();
         }

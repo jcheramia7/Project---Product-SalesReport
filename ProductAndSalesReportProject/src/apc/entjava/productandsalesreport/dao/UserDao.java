@@ -3,6 +3,7 @@ package apc.entjava.productandsalesreport.dao;
 import apc.entjava.productandsalesreport.businesslogic.UserService;
 import apc.entjava.productandsalesreport.model.User;
 
+import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -45,4 +46,6 @@ public class UserDao implements UserService {
         em.close();
         return user;
     }
+
+
 }
