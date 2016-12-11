@@ -24,40 +24,47 @@
                     <p>Place your content here.</p>
                 </div>
             </div>
-            <h:dataTable>
-                <h:column>
-                    <f:facet name="header">Sale Bread</f:facet>
-                     #{sale.saleBread}
-                 </h:column>
-                <h:column>
-                    <f:facet name="header">Sale Date</f:facet>
-                    #{sale.saleDate}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sale ELoad</f:facet>
-                    #{sale.saleEload}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sale Globe</f:facet>
-                    #{sale.saleGlobe}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sale Grocery</f:facet>
-                    #{sale.saleGrocery}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Gross Sale</f:facet>
-                    #{sale.saleGrossSales}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sale Smart</f:facet>
-                    #{sale.saleSmart}
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Sale Sun</f:facet>
-                    #{sale.saleSun}
-                </h:column>
-            </h:dataTable>
+
+            <div class="row mt">
+            <div class="col-lg-12">
+                <h:form>
+                    <h:dataTable var="sale" value="#{saleBean.sales}" border="1" styleClass="table table-hover">
+                        <h:column>
+                            <f:facet name="header">Sale Bread</f:facet>
+                            #{sale.saleBread}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale Date</f:facet>
+                            #{sale.saleDate}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale ELoad</f:facet>
+                            #{sale.saleEload}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale Globe</f:facet>
+                            #{sale.saleGlobe}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale Grocery</f:facet>
+                            #{sale.saleGrocery}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Gross Sale</f:facet>
+                            #{sale.saleGrossSales}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale Smart</f:facet>
+                            #{sale.saleSmart}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Sale Sun</f:facet>
+                            #{sale.saleSun}
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </div>
+            </div>
         </ui:define>
     </ui:composition>
 </h:body>
