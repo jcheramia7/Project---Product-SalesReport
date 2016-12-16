@@ -8,9 +8,7 @@
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/> <!-- use my sql in database -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/salesandproduct?useLegacyDateTimeCode=false&amp;serverTimezone=Asia/Manila"/> <!-- url for the database -->
-            <property name="javax.persistence.jdbc.user" value="salesandproduct"/> <!-- user dont use the root  -->
-            <property name="javax.persistence.jdbc.password" value="salesandproductpass"/> <!-- password for database -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://us-cdbr-iron-east-04.cleardb.net/ad_e5b2d62740fdd60?user=be589e5926a9e9&amp;password=a6833c5b&amp;useLegacyDateTimeCode=false&amp;serverTimezone=Asia/Manila"/> <!-- url for the database -->
             <property name="hibernate.show_mysql" value="true"/> <!-- if there's error in sql -->
             <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- auto generate database tables -->
         </properties>

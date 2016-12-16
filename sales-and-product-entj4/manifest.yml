@@ -1,0 +1,9 @@
+applications:
+- path: target/ProductAndSalesReportProject_war.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: sales-and-product-entj4
+  host: entj4-sales-and-product
+  disk_quota: 1024M
+  buildpack: java_buildpack

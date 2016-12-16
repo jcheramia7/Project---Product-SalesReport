@@ -25,49 +25,53 @@
                 </div>
             </div>
 
-            <h:dataTable var="product" value="#{productBean.products}" border="1">
-                <h:column>
-                    <f:facet name="header">Product Alert Quantity</f:facet>
-                    #{product.productAlertQuantity}
-                </h:column>
+            <div class="row mt">
+             <div class="col-lg-12">
+                <h:form>
+                    <h:dataTable var="product" value="#{productBean.products}" border="1" styleClass="table table-hover">
+                        <h:column>
+                            <f:facet name="header">Product Alert Quantity</f:facet>
+                            #{product.productAlertQuantity}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Cost</f:facet>
-                    #{product.productCost}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Cost</f:facet>
+                            #{product.productCost}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Expiration Date</f:facet>
-                    #{product.productExpirationDate}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Expiration Date</f:facet>
+                            #{product.productExpirationDate}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Image</f:facet>
-                    #{product.productImage}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Image</f:facet>
+                            #{product.productImage}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Name</f:facet>
-                    #{product.productName}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Name</f:facet>
+                            #{product.productName}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Price</f:facet>
-                    #{product.productPrice}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Price</f:facet>
+                            #{product.productPrice}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Quantity</f:facet>
-                    #{product.productQuantity}
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">Product Quantity</f:facet>
+                            #{product.productQuantity}
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">Product Weight</f:facet>
-                    #{product.productWeight}
-                </h:column>
-
-            </h:dataTable>
-
+                        <h:column>
+                            <f:facet name="header">Product Weight</f:facet>
+                            #{product.productWeight}
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+             </div>
+            </div>
         </ui:define>
     </ui:composition>
 </h:body>
