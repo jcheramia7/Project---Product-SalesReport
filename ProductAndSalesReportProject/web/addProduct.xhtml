@@ -80,6 +80,9 @@
                             <p>Expiration Date</p>
                             <span class="icon-case"> <i class ="fa fa-calendar-minus-o fa-lg"/></span>
                             <h:inputText type="date" name="date" value="#{productBean.product.productExpirationDate}" />
+                            <h:inputText type="date" name="date" id="date" data-rule="required"
+                                         value="#{productBean.product.productExpirationDate}" pattern="MM-dd-yyyy"
+                                         placeholder="Date" onfocus="this.type='date'"/>
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">

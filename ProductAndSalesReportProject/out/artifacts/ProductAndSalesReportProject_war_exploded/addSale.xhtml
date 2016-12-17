@@ -32,7 +32,9 @@
                         <div class="form-group">
                             <p>Date</p>
                             <span class="icon-case"> <i class ="fa fa-calendar-o fa-lg"/></span>
-                            <input type="date" name="date" id="date" data-rule="required"/>
+                            <h:inputText type="date" name="date" id="date" data-rule="required"
+                                         value="#{saleBean.sale.saleDate}" pattern="MM-dd-yyyy"
+                                         placeholder="Date" onfocus="this.type='date'"/>
                             <div class="validation"></div>
                         </div>
 

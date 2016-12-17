@@ -52,11 +52,10 @@ public class Expense {
         this.expenseCost = expenseCost;
     }
 
-
     public String getExpenseDate() {
         return expenseDate;
     }
-
+    @Column(nullable = false)
     public void setExpenseDate(String expenseDate) {
         this.expenseDate = expenseDate;
     }
