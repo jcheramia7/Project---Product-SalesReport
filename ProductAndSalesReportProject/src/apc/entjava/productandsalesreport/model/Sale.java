@@ -16,6 +16,7 @@ public class Sale {
     private BigDecimal saleGlobe;
     private BigDecimal saleSun;
     private User user;
+    private Boolean editable;
 
     public Sale() {
     }
@@ -116,5 +117,13 @@ public class Sale {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(Boolean editable) {
+        this.editable = editable;
     }
 }

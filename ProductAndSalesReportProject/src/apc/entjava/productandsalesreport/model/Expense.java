@@ -12,6 +12,7 @@ public class Expense {
     private String expenseName;
     private BigDecimal expenseCost;
     private String expenseDate;
+    private Boolean editable;
 
     public Expense() {
     }
@@ -58,5 +59,13 @@ public class Expense {
 
     public void setExpenseDate(String expenseDate) {
         this.expenseDate = expenseDate;
+    }
+
+    public Boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(Boolean editable) {
+        this.editable = editable;
     }
 }

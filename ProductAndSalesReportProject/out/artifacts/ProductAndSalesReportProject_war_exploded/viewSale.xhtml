@@ -61,6 +61,13 @@
                             <f:facet name="header">Sale Sun</f:facet>
                             #{sale.saleSun}
                         </h:column>
+
+                        <h:column>
+                            <h:commandButton action="#{saleBean.editAction(sale)}"  value="Edit"/>
+                        </h:column>
+                        <h:column>
+                            <h:commandButton action="#{saleBean.delete(sale)}"   value="Delete"/>
+                        </h:column>
                     </h:dataTable>
                 </h:form>
             </div>

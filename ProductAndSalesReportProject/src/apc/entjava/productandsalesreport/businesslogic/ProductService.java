@@ -10,5 +10,6 @@ import java.util.List;
 public interface ProductService {
     List<Product> getProducts();
     void addProduct(Product newProduct);
+	void remove(Product productId);
 
 }

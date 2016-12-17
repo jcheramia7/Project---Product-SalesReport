@@ -7,21 +7,12 @@ import apc.entjava.productandsalesreport.dao.ProductDao;
 import apc.entjava.productandsalesreport.model.Category;
 import apc.entjava.productandsalesreport.model.Product;
 
-import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.validator.ValidatorException;
-import javax.mail.MessagingException;
-import javax.mail.Part;
 import javax.sql.rowset.serial.SerialArray;
-import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 @ManagedBean
 @ViewScoped
@@ -47,7 +38,6 @@ public class ProductBean implements Serializable{
         }
         return product;
     }
-
 
     public void setProduct(Product product) {
         this.product = product;
@@ -131,5 +121,15 @@ public class ProductBean implements Serializable{
     public String addProduct(){
         this.productService.addProduct(product);
         return ("viewProduct?faces-redirect=true");
+    }
+
+    public String delete(Product product){
+        this.productService.remove(product);
+        return null;
+    }
+
+    public String editAction(Product product){
+        product.setEditable(true);
+        return null;
     }
 }

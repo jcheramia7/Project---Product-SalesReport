@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
+import static sun.management.Agent.error;
+
 public class CategoryDao implements CategoryService {
     private EntityManagerFactory emf;
 
@@ -29,6 +31,29 @@ public class CategoryDao implements CategoryService {
     }
 
     @Override
+    public void remove(Category categoryId) {
+        EntityManager em = emf.createEntityManager();
+        try{
+            em.getTransaction().begin();
+            categoryId = em.find(categoryId.getClass(), categoryId.getCategoryId());
+            em.remove(categoryId);
+            em.flush();
+            em.getTransaction().commit();
+        }catch (Exception e){
+            error("Unable to delete" + categoryId.toString());
+        }finally {
+            if(em.getTransaction().isActive()) em.getTransaction().rollback();
+            em.close();
+        }
+    }
+
+    @Override
+    public void update(Category categoryName) {
+        EntityManager em = emf.createEntityManager();
+
+    }
+
+    @Override
     public List<Category> getCategories() {
         EntityManager em = emf.createEntityManager();
         try{
@@ -44,4 +69,6 @@ public class CategoryDao implements CategoryService {
             return null;
         }
     }
+
+
 }

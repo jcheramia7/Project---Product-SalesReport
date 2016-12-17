@@ -7,12 +7,14 @@ import apc.entjava.productandsalesreport.model.Category;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 
 @ManagedBean
 @ViewScoped
 public class CategoryBean implements Serializable{
+    private static final long serialVersionUID = 1L;
 
     private CategoryService categoryService = new CategoryDao();
 
@@ -21,6 +23,9 @@ public class CategoryBean implements Serializable{
     private String categoryName;
 
     private List<Category> categories;
+    private Category beforeEditItem = null;
+    private Boolean editable;
+
 
     public Category getCategory() {
         if(this.category == null){
@@ -50,5 +55,28 @@ public class CategoryBean implements Serializable{
     public String addCategory(){
         this.categoryService.addCategory(category);
         return ("viewCategory?faces-redirect=true");
+    }
+
+    public void edit(Category category){
+        beforeEditItem = category.clone();
+    }
+
+    public String delete(Category category){
+        this.categoryService.remove(category);
+        return null;
+    }
+
+
+    public String saveAction(){
+       for (Category category : categories) {
+            category.setEditable(false);
+       }
+
+       return null;
+    }
+
+    public String editAction(Category category){
+        category.setEditable(true);
+        return null;
     }
 }

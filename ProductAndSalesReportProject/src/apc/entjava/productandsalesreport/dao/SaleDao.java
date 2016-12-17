@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
+import static sun.management.Agent.error;
+
 public class SaleDao implements SaleService {
     private EntityManagerFactory emf;
 
@@ -29,6 +31,23 @@ public class SaleDao implements SaleService {
             em.getTransaction().rollback();
             em.close();
             return null;
+        }
+    }
+	
+	@Override
+    public void remove(Sale saleId) {
+        EntityManager em = emf.createEntityManager();
+        try{
+            em.getTransaction().begin();
+            saleId = em.find(saleId.getClass(), saleId.getSaleId());
+            em.remove(saleId);
+            em.flush();
+            em.getTransaction().commit();
+        }catch (Exception e){
+            error("Unable to delete" + saleId.toString());
+        }finally {
+            if(em.getTransaction().isActive()) em.getTransaction().rollback();
+            em.close();
         }
     }
 

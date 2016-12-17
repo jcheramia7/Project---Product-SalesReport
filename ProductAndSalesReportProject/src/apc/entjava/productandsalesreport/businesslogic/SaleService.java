@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface SaleService {
 
-
     List<Sale> getSales();
     void addSale(Sale newSale);
+	void remove(Sale saleId);
 }

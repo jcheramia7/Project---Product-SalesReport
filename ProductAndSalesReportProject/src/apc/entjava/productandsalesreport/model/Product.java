@@ -17,6 +17,7 @@ public class Product {
     private String productImage;
     private User user;
     private Category category;
+    private Boolean editable;
 
     public Product() {
     }
@@ -127,5 +128,13 @@ public class Product {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public Boolean isEditable() {
+        return editable;
+    }
+
+    public void setEditable(Boolean editable) {
+        this.editable = editable;
     }
 }

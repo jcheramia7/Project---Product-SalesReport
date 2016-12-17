@@ -7,6 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
+import static sun.management.Agent.error;
+
 /**
  * Created by student on 12/8/2016.
  */
@@ -31,6 +33,23 @@ public class ExpenseDao implements ExpenseService {
             em.getTransaction().rollback();
             em.close();
             return null;
+        }
+    }
+	
+	@Override
+    public void remove(Expense expenseId) {
+        EntityManager em = emf.createEntityManager();
+        try{
+            em.getTransaction().begin();
+            expenseId = em.find(expenseId.getClass(), expenseId.getExpenseId());
+            em.remove(expenseId);
+            em.flush();
+            em.getTransaction().commit();
+        }catch (Exception e){
+            error("Unable to delete" + expenseId.toString());
+        }finally {
+            if(em.getTransaction().isActive()) em.getTransaction().rollback();
+            em.close();
         }
     }
 

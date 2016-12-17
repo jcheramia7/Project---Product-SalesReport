@@ -11,4 +11,7 @@ public interface CategoryService {
 
     List<Category> getCategories();
     void addCategory(Category newCategory);
+    void remove(Category categoryId);
+    void update(Category categoryName);
+
 }

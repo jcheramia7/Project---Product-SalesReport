@@ -2,6 +2,7 @@ package apc.entjava.productandsalesreport;
 
 import apc.entjava.productandsalesreport.businesslogic.SaleService;
 import apc.entjava.productandsalesreport.dao.SaleDao;
+import apc.entjava.productandsalesreport.model.Category;
 import apc.entjava.productandsalesreport.model.Sale;
 
 import javax.faces.bean.ManagedBean;
@@ -129,5 +130,15 @@ public class SaleBean implements Serializable{
     public String addSales(){
         this.saleService.addSale(sale);
         return ("viewSale?faces-redirect=true");
+    }
+
+    public String delete(Sale sale){
+        this.saleService.remove(sale);
+        return null;
+    }
+
+    public String editAction(Sale sale){
+        sale.setEditable(true);
+        return null;
     }
 }

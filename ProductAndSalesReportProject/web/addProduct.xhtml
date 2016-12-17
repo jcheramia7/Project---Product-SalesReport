@@ -27,16 +27,12 @@
                 </div>
             </div>
             <h:form>
-                <div style="margin-left: 35%;">
-                    <h:form enctype="multipart/form-data">
-                        <p>Image: </p>
-                        <span class="icon-case"> <i class ="fa fa-balance-scale fa-lg"/></span>
-                        <h:inputFile validator="#{productBean.validateFile}" id="file" value="#{productBean.product.productImage}" style="height: 50px"/>
-                        <h:commandButton ajax="false" action="#{productBean.upload}" value="Upload" />
-
-                        <div class="validation"></div>
-                    </h:form>
-                </div>
+                <!--<div style="margin-left: 35%;">
+                    <p>Image: </p>
+                    <span class="icon-case"> <i class ="fa fa-balance-scale fa-lg"/></span>
+                    <h:inputFile value="#{productBean.product.productImage}" style="height: 50px"/>
+                    <div class="validation"></div>
+                </div>-->
                 <div class="contentform">
                     <div class="leftcontact">
                         <div class="form-group">
@@ -83,7 +79,7 @@
                         <div class="form-group">
                             <p>Expiration Date</p>
                             <span class="icon-case"> <i class ="fa fa-calendar-minus-o fa-lg"/></span>
-                            <input type="date" name="date" id="date" data-rule="required"/>
+                            <h:inputText type="date" name="date" value="#{productBean.product.productExpirationDate}" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group">

@@ -9,6 +9,7 @@ import javax.persistence.Id;
 public class Category{
     private int categoryId;
     private String categoryName;
+    private Boolean editable;
 
 
     public Category() {
@@ -38,5 +39,17 @@ public class Category{
         this.categoryName = categoryName;
     }
 
+    @Override
+    public Category clone(){
+        return new Category(categoryId, categoryName);
+    }
 
+    public void restore(Category category){
+        this.categoryId = category.categoryId;
+        this.categoryName = category.categoryName;
+    }
+
+    public void setEditable(boolean editable) {
+        this.editable = editable;
+    }
 }

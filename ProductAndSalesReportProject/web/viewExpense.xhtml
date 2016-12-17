@@ -33,18 +33,24 @@
             <div class="row mt">
                 <div class="col-lg-12">
             <h:form>
-                <h:dataTable var="expense" value="#{expenseBean.expenses}" border="1" styleClass="table table-hover">
+                <h:dataTable var="e" value="#{expenseBean.expenses}" border="1" styleClass="table table-hover">
                     <h:column>
                         <f:facet name="header">Expense Cost</f:facet>
-                        #{expense.expenseCost}
+                        #{e.expenseCost}
                     </h:column>
                     <h:column>
                         <f:facet name="header">Expense Date</f:facet>
-                        #{expense.expenseDate}
+                        #{e.expenseDate}
                     </h:column>
                     <h:column>
                         <f:facet name="header">Expense Name</f:facet>
-                        #{expense.expenseName}
+                        #{e.expenseName}
+                    </h:column>
+                    <h:column>
+                        <h:commandButton action="#{expenseBean.editAction(e)}"  value="Edit"/>
+                    </h:column>
+                    <h:column>
+                        <h:commandButton action="#{expenseBean.delete(e)}"   value="Delete"/>
                     </h:column>
                 </h:dataTable>
             </h:form>

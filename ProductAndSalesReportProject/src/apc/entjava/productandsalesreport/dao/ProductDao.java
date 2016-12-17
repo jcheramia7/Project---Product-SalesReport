@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.List;
 
+import static sun.management.Agent.error;
+
 /**
  * Created by student on 12/8/2016.
  */
@@ -32,6 +34,23 @@ public class ProductDao implements ProductService {
             em.getTransaction().rollback();
             em.close();
             return null;
+        }
+    }
+	
+	@Override
+    public void remove(Product productId) {
+        EntityManager em = emf.createEntityManager();
+        try{
+            em.getTransaction().begin();
+            productId = em.find(productId.getClass(), productId.getProductId());
+            em.remove(productId);
+            em.flush();
+            em.getTransaction().commit();
+        }catch (Exception e){
+            error("Unable to delete" + productId.toString());
+        }finally {
+            if(em.getTransaction().isActive()) em.getTransaction().rollback();
+            em.close();
         }
     }
 

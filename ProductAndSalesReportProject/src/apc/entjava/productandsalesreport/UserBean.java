@@ -77,4 +77,8 @@ public class UserBean implements Serializable{
         }
     }
 
+    public String logout(){
+        ((HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false)).invalidate();
+        return "login";
+    }
 }

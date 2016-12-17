@@ -28,45 +28,52 @@
             <div class="row mt">
              <div class="col-lg-12">
                 <h:form>
-                    <h:dataTable var="product" value="#{productBean.products}" border="1" styleClass="table table-hover">
+                    <h:dataTable var="p" value="#{productBean.products}" border="1" styleClass="table table-hover">
                         <h:column>
                             <f:facet name="header">Product Alert Quantity</f:facet>
-                            #{product.productAlertQuantity}
+                            #{p.productAlertQuantity}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Cost</f:facet>
-                            #{product.productCost}
+                            #{p.productCost}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Expiration Date</f:facet>
-                            #{product.productExpirationDate}
+                            #{p.productExpirationDate}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Image</f:facet>
-                            #{product.productImage}
+                            #{p.productImage}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Name</f:facet>
-                            #{product.productName}
+                            #{p.productName}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Price</f:facet>
-                            #{product.productPrice}
+                            #{p.productPrice}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Quantity</f:facet>
-                            #{product.productQuantity}
+                            #{p.productQuantity}
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">Product Weight</f:facet>
-                            #{product.productWeight}
+                            #{p.productWeight}
+                        </h:column>
+
+                        <h:column>
+                            <h:commandButton action="#{productBean.editAction(p)}"  value="Edit"/>
+                        </h:column>
+                        <h:column>
+                            <h:commandButton action="#{productBean.delete(p)}"   value="Delete"/>
                         </h:column>
                     </h:dataTable>
                 </h:form>
